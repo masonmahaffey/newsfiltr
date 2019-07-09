@@ -1,5 +1,11 @@
 ![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.25.40%20AM.png)
 
+![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.25.51%20AM.png)
+
+![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.26.19%20AM.png)
+
+![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.26.30%20AM.png)
+
 # Newsfiltr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4 and uses a nodejs backend. A separate repository for the backend can be found under my repository list.
