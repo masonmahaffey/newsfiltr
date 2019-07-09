@@ -1,3 +1,5 @@
+![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/home_page.png)
+
 # Newsfiltr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4 and uses a nodejs backend. A separate repository for the backend can be found under my repository list.
