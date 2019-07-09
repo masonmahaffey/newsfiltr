@@ -6,6 +6,8 @@ Newsfiltr is intended to be a place for avid news readers to give feedback on th
 
 This project is still in the works and is by no means complete. It remains as an enjoyable side project I work on in my spare time!! 😜
 
+<br />
+<br />
 
 
 ![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.25.40%20AM.png)
