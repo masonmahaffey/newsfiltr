@@ -1,0 +1,502 @@
+
+
+
+
+
+
+
+<div class="modal fade" id="edit-review" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<div class="card-header">View Review<span class="card-subtitle"></span></div>-->
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="main-content container-fluid" style="margin-top: -60px;padding-bottom: 0px; padding-left: 0px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h3 style="font-weight: bold;">{{selectedReview.title}}</h3>
+
+                  <p style="color: grey;">Wish to read the article? Click <a data-dismiss="modal" routerLink="/article/{{selectedReview.unique}}" style="cursor: pointer; z-index: 10000000; text-decoration: underline;" >here</a> to go to it.</p>
+                  <!--<hr/>-->
+
+
+                  <div [innerHTML]="selectedReview.body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="notification-box" style="position: fixed;top: 70px;right: 10px;z-index: 10000;"></div>
+
+<div class="be-wrapper">
+  <nav class="navbar navbar-expand fixed-top be-top-header">
+    <div class="container-fluid">
+      <div class="be-navbar-header">
+        <a (click)="navigatePageTo('topStoriesActive')" routerLink="/" class="navbar-brand" style="cursor: pointer;background-image: none;">
+          <span style="font-family: 'Comfortaa', cursive; font-size: 22px; font-weight: bolder; color: red;">newsfiltr</span>
+          <!--<span style="font-family: 'Raleway', cursive; font-size: 28px; font-weight: bolder; color: #b92c27;">newsfiltr</span>-->
+          <small style="color: black;">fight fake news</small>
+        </a>
+      </div>
+      <div class="be-right-navbar">
+        <ul *ngIf="auth == 1" class="nav navbar-nav float-right be-user-nav">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
+            <div class="dropdown-menu" role="menu">
+              <div class="user-info">
+                <div class="user-name">Túpac Amaru</div>
+                <div class="user-position online">Available</div>
+              </div>
+              <a style="cursor: pointer;" class="dropdown-item" (click)="goToAccount()" ><span class="icon mdi mdi-face"></span>Profile</a>
+              <a style="cursor: pointer;" class="dropdown-item" (click)="goToSettings()"><span class="icon mdi mdi-settings"></span>Settings</a>
+              <a (click)="logout()" style="cursor: pointer;" class="dropdown-item"><span class="icon mdi mdi-power"></span>Logout</a>
+            </div>
+          </li>
+        </ul>
+        <!--<div class="page-title"><span>Headlines</span></div>-->
+        <ul *ngIf="auth == 1" class="nav navbar-nav float-right be-icons-nav">
+          <!--<li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"></span></a></li>-->
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
+            <ul class="dropdown-menu be-notifications">
+              <li>
+                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                <div class="list">
+                  <div class="be-scroller">
+                    <div class="content">
+                      <ul>
+                        <li class="notification notification-unread"><a href="#">
+                          <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
+                          <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer"> <a routerLink="/notifications" style="cursor: pointer;margin-top: 74px;">View all notifications</a></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div *ngIf="auth == 0" style="margin-right: 20px;">
+          <ul  class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span routerLink="/signup" class="signup-button">Sign Up</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span routerLink="/login" class="login-button" style="margin-right: 5px;margin-left:50px;">Log In</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span style="font-family: 'Comfortaa', cursive; font-size: 22px; font-weight: bolder; color: white; margin-right:20px;">newsfiltr</span>
+              </a>
+            </li>
+          </ul>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </nav>
+  <div class="be-left-sidebar">
+    <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" style="cursor: pointer;">Menu</a>
+      <div class="left-sidebar-spacer">
+        <div class="left-sidebar-scroll">
+          <div class="left-sidebar-content">
+            <ul class="sidebar-elements">
+              <li class="divider"></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-home"></i><span>Top Stories</span></a></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-alert-octagon"></i><span>Breaking</span></a></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-map"></i><span>World</span></a></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-money"></i><span>Business</span></a></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-memory"></i><span>Technology</span></a></li>
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-walk"></i><span>Sports</span></a></li>
+              <li class="divider">Options</li>
+              <li><a routerLink="/"  style="cursor: pointer;"><i class="icon mdi mdi-accounts"></i><span>Top Writers</span></a></li>
+              <!--<li class="{{electionActive}}"><a (click)="navigatePageTo('electionActive')" style="cursor: pointer;"><i class="icon mdi mdi-map"></i><span>Election</span></a></li>-->
+              <!--<li class="{{sourcesActive}}"><a (click)="navigatePageTo('sourcesActive')" style="cursor: pointer;"><i class="icon mdi mdi-star-half"></i><span>Sources</span></a></li>-->
+              <!--<li><a href="documentation.html"><i class="icon mdi mdi-accounts"></i><span>Top Authors</span></a></li>-->
+              <li><a routerLink="/" style="cursor: pointer;"><i class="icon mdi mdi-help"></i><span>About</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="progress-widget">
+        <div class="progress-data"><span class="progress-value">60%</span><span class="name">Election Cycle</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" style="width: 60%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="be-content">
+    <div style="padding-top: 15px;" class="main-content container-fluid">
+      <div class="main-content container-fluid" style="padding: 0px; margin-top: -11px; margin-left: 3px;padding-right: 5px;">
+        <div class="user-profile">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="user-display" style="margin-top: 12px;">
+                <div class="user-display-bg">
+                  <!--<img src="assets/img/user-profile-display.png" alt="Profile Background">-->
+                </div>
+                <div class="user-display-bottom">
+                  <div class="user-display-avatar" style="top: 14px;">
+                    <img style="height: 98px; width: 98px;" src="assets/img/avatar-150.png" alt="Avatar">
+                  </div>
+                  <div class="user-display-info" style="padding-bottom: 20px;">
+                    <div *ngIf="displayname">
+                      <div class="name acct-name" style="font-size: 24px;">{{displayname}}
+                        <button *ngIf="following && !istheuser" (click)="unfollowUser()" style="margin-left: 8px;" class="btn btn-space btn-primary btn-xs following-wrapper"><span class="following">following</span><span class="unfollow">unfollow</span></button>
+                        <button *ngIf="!following && !istheuser" (click)="followUser()" style="margin-left: 8px;" class="btn btn-space btn-primary btn-xs">follow</button>
+                      </div>
+                    </div>
+                    <div *ngIf="tagline.length > 0" style="font-size: 14px;" class="nick acct-tagline">{{tagline}}</div>
+                    <div *ngIf="!tagline.length > 0" style="font-size: 14px;" class="nick acct-tagline"> You have no tagline!</div>
+                    <div *ngIf="description.length > 0 && !descriptionExpanded" class="nick acct-description" style="font-size: 13px;margin-top: 10px;">
+                      <div>{{clipReviewBody(description)}} ...</div>
+                      <span (click)="toggleDescriptionExpand()" class="description-more">(more)</span>
+                    </div>
+                    <div *ngIf="description.length > 0 && descriptionExpanded" class="nick acct-description" style="font-size: 13px;margin-top: 10px;">
+                      <div [innerHTML]="description"></div>
+                      <span (click)="toggleDescriptionExpand()" class="description-more">(collapse)</span>
+                    </div>
+
+                    <div *ngIf="!description.length > 0" style="font-size: 13px;margin-top: 10px;" class="nick acct-description">
+                      You have no description!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="user-info-list card">
+                <div class="card">
+                  <!--<div class="card-header">Default Tabs</div>-->
+                  <div class="tab-container">
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item"><a class="nav-link active" href="#reviews" data-toggle="tab" role="tab">Reviews</a></li>
+                      <!--<li class="nav-item"><a class="nav-link" href="#votes" data-toggle="tab" role="tab">Votes</a></li>-->
+                      <!--<li class="nav-item"><a class="nav-link" href="#posts" data-toggle="tab" role="tab">Posts</a></li>-->
+                      <!--<li class="nav-item"><a class="nav-link" href="#comments" data-toggle="tab" role="tab">Comments</a></li>-->
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="reviews" role="tabpanel">
+                        <div *ngIf="!loading">
+                          <div style="padding-top: 4px; padding-bottom: 4px; " *ngFor="let review of user.reviews" class="row be-booking-promos profile-reviews">
+                            <div (click)="selectReview(review)" data-toggle="modal" data-target="#edit-review" style="padding-top: 0px !important; padding-bottom:0px !important; margin-bottom: -5px; margin-top: 0px;" class="row">
+                              <h4 style="font-weight: bold;">{{review.title}}</h4>
+                              <p style="width: 100%;">{{clipReviewBody(review.body)}} etc...</p>
+                              <div style="width: 100%; position: relative; top: -4px;">
+                                <p style="color: grey;">{{review.time | timeAgo}}</p>
+                              </div>
+                              <!--<span [innerHTML]="review.body" *ngIf="showMoreReviews.includes(review.body)"></span>-->
+                              <!--<span *ngIf="showMoreReviews.includes(review.body)" (click)="hideMore(review.body)" class="review-description-more">(collapse)</span>-->
+                              <hr/>
+                            </div>
+                          </div>
+                          <p *ngIf="!user.reviews.length > 0" style="font-weight: bold;">You haven't written any reviews!</p>
+                        </div>
+
+                      </div>
+                      <!--<div class="tab-pane" id="posts" role="tabpanel">-->
+                      <!--<h4>Feature coming soon!</h4>-->
+                      <!--</div>-->
+                      <div class="tab-pane" id="votes" role="tabpanel">
+                        <h5 style="font-weight: bold;">We are currently working on this feature!</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3" style="margin-top: 12px;">
+              <div class="widget widget-fullwidth widget-small">
+                <div class="widget-head pb-6">
+                  <!--<div class="tools"><span class="icon mdi mdi-chevron-down"></span><span class="icon mdi mdi-refresh-sync"></span><span class="icon mdi mdi-close"></span></div>-->
+                  <div class="title">Credentials & Highlights</div>
+                  <hr/>
+                  <div style="font-size: 14px;">
+                    <!--<span class="mdi mdi-accounts-alt"></span> <span style="margin-left: 3px;">41.6k views</span>-->
+                    <span style="margin-left: 3px;">We are currently working on this feature.</span>
+                  </div>
+                  <!--<p>Feature coming soon!</p>-->
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <nav class="be-right-sidebar">
+    <div class="sb-content">
+      <div class="tab-navigation">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+      </div>
+      <div class="tab-panel">
+        <div class="tab-content">
+          <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+            <div class="chat-contacts">
+              <div class="chat-sections">
+                <div class="be-scroller-chat">
+                  <div class="content">
+                    <h2>Recent</h2>
+                    <div class="contact-list contact-list-recent">
+                      <div class="user"><a href="#"><img src="assets/img/avatar1.png" alt="Avatar">
+                        <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar2.png" alt="Avatar">
+                        <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar3.png" alt="Avatar">
+                        <div class="user-data"><span class="status offline"></span><span class="name">Joel King		</span><span class="message">Ready for the meeti...</span></div></a></div>
+                    </div>
+                    <h2>Contacts</h2>
+                    <div class="contact-list">
+                      <div class="user"><a href="#"><img src="assets/img/avatar4.png" alt="Avatar">
+                        <div class="user-data2"><span class="status"></span><span class="name">Mike Bolthort</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar5.png" alt="Avatar">
+                        <div class="user-data2"><span class="status"></span><span class="name">Maggie jackson</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar6.png" alt="Avatar">
+                        <div class="user-data2"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-input">
+                <input type="text" placeholder="Search..." name="q"><span class="mdi mdi-search"></span>
+              </div>
+            </div>
+            <div class="chat-window">
+              <div class="title">
+                <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
+                  <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                </div><span class="icon return mdi mdi-chevron-left"></span>
+              </div>
+              <div class="chat-messages">
+                <div class="be-scroller-messages">
+                  <div class="content">
+                    <ul>
+                      <li class="friend">
+                        <div class="msg">Hello</div>
+                      </li>
+                      <li class="self">
+                        <div class="msg">Hi, how are you?</div>
+                      </li>
+                      <li class="friend">
+                        <div class="msg">Good, I'll need support with my pc</div>
+                      </li>
+                      <li class="self">
+                        <div class="msg">Sure, just tell me what is going on with your computer?</div>
+                      </li>
+                      <li class="friend">
+                        <div class="msg">I don't know it just turns off suddenly</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-input">
+                <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
+                  <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
+            <div class="todo-container">
+              <div class="todo-wrapper">
+                <div class="be-scroller-todo">
+                  <div class="todo-content"><span class="category-title">Today</span>
+                    <ul class="todo-list">
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox" checked=""><span class="custom-control-label">Initialize the project</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                        </label>
+                      </li>
+                    </ul><span class="category-title">Tomorrow</span>
+                    <ul class="todo-list">
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Initialize the project							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-input">
+                <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
+            <div class="settings-wrapper">
+              <div class="be-scroller-settings"><span class="category-title">General</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st1" id="st1"><span>
+                            <label for="st1"></label></span>
+                    </div><span class="name">Available</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st2" id="st2"><span>
+                            <label for="st2"></label></span>
+                    </div><span class="name">Enable notifications</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st3" id="st3"><span>
+                            <label for="st3"></label></span>
+                    </div><span class="name">Login with Facebook</span>
+                  </li>
+                </ul><span class="category-title">Notifications</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st4" id="st4"><span>
+                            <label for="st4"></label></span>
+                    </div><span class="name">Email notifications</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st5" id="st5"><span>
+                            <label for="st5"></label></span>
+                    </div><span class="name">Project updates</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st6" id="st6"><span>
+                            <label for="st6"></label></span>
+                    </div><span class="name">New comments</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st7" id="st7"><span>
+                            <label for="st7"></label></span>
+                    </div><span class="name">Chat messages</span>
+                  </li>
+                </ul><span class="category-title">Workflow</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st8" id="st8"><span>
+                            <label for="st8"></label></span>
+                    </div><span class="name">Deploy on commit</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+

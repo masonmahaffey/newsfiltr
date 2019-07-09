@@ -1,0 +1,356 @@
+<div>
+    <div class="row">
+      <div class="col-xl-9">
+        <div class="col-xl-12" *ngFor="let article of articles">
+          <div style="margin-bottom: 15px;" class="card article-card">
+            <div style="display: inline-block; padding: 10px;" class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+              <!--<span class="upvote-count">-->
+                <!--<div style="cursor: pointer; margin-top: -25px;margin-left: 9%;" class="icon-container">-->
+                  <!--<div [style.backgroundColor]="calculateColor(article.rating)"-->
+                    <!--style="-->
+                  <!--height: 43px;-->
+                  <!--width: 43px;-->
+                  <!--position: relative;-->
+                  <!--left: -34px;-->
+                  <!--top: -4px;" class="icon">-->
+                    <!--<span [style.left]="calculateLeft(article.rating)" [style.fontSize]="calculateFontSize(article.rating)"-->
+                      <!--style="-->
+                  <!--font-weight: bolder;-->
+                  <!--position: relative;-->
+                  <!--top: 0px;-->
+                  <!--color: white;-->
+                  <!--font-family: sans-serif;" class="mdi">{{article.rating}}<span style="font-size:12px;color: white;">%</span></span>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<button class="btn btn-space btn-secondary btn-md" style="    width: 50px;-->
+                  <!--position: relative;-->
+                  <!--top: -6px;-->
+                  <!--left: -4px;">-->
+                  <!--&lt;!&ndash;<i class="icon mdi mdi-home"></i> &ndash;&gt;-->
+                  <!--Rate </button>-->
+                <!--<small style="position: relative;top: -29px;left: -3px;color:#a29d9d;">35 ratings</small>-->
+              <!--</span>-->
+
+              <!--<span class="upvote-count">-->
+                <!--<span data-toggle="modal" data-target="#view-article" style="font-size: 18px; font-weight: bold;">92%</span>-->
+              <!--</span>-->
+
+
+              <span class="upvote-count"><span style="position: relative;" [style.left]="calculateVoteCountLeft(article.voteCount)">{{article.voteCount}}</span></span>
+              <i *ngIf="article.uservote != null && !article.uservote.isUpvote" (click)="cancelVote(article.unique)" class="fa fa-arrow-down vote-arrows downvote-arrow vote-arrows-voted" aria-hidden="true"></i>
+              <i *ngIf="article.uservote != null && article.uservote.isUpvote" (click)="downvote(article.unique)" data-toggle="modal" data-target="#vote-on-article" class="fa fa-arrow-down vote-arrows downvote-arrow" aria-hidden="true"></i>
+              <i *ngIf="article.uservote == null" (click)="downvote(article.unique)" data-toggle="modal" data-target="#vote-on-article" class="fa fa-arrow-down vote-arrows downvote-arrow" aria-hidden="true"></i>
+              <i *ngIf="article.uservote != null && !article.uservote.isUpvote" (click)="upvote(article.unique)" data-toggle="modal" data-target="#vote-on-article" class="fa fa-arrow-up vote-arrows upvote-arrow" aria-hidden="true"></i>
+              <i *ngIf="article.uservote != null && article.uservote.isUpvote" (click)="cancelVote(article.unique)" class="fa fa-arrow-up vote-arrows upvote-arrow vote-arrows-voted" aria-hidden="true"></i>
+              <i *ngIf="article.uservote == null" (click)="upvote(article.unique)" data-toggle="modal" data-target="#vote-on-article" class="fa fa-arrow-up vote-arrows upvote-arrow" aria-hidden="true"></i>
+            </div>
+
+            <div class="col-xl-9 col-lg-9 col-md-8 col-sm-8 article-content-text-wrapper">
+              <div>
+                <h4 class="article-title">
+                  <a routerLink="/article/{{article.unique}}" class="nostyle article-title-a">
+                    {{article.title}}
+                    <!--<span style="color: red;">[accurate]</span>-->
+                    <span style="background-color: #980000; color: white; padding-left: 1px; padding-right: 1px; font-size: 10px;">biased</span>
+                    <span style="background-color: #ff0000; color: white; padding-left: 1px; padding-right: 1px; font-size: 10px;">accurate</span>
+                  </a></h4>
+                <p class="article-description">{{article.description}}</p>
+              </div>
+
+              <div class="article-button-row">
+                <!--<button data-toggle="modal" data-target="#mod-success" class="btn btn-space btn-secondary btn-xs write-review"><i class="icon icon-left mdi mdi-edit"></i>Write Review</button>-->
+                <!--<button class="btn btn-space btn-secondary btn-xs example-popover" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="View the community ratings of this source">-->
+                  <!--{{article.source.name}}</button>-->
+                <!--<a data-toggle="modal" data-target="#must-subscribe" class="btn btn-sm btn-secondary btn-block"-->
+                   <!--style="cursor: pointer;-->
+                   <!--display: inline;-->
+                   <!--height: 19px;-->
+                   <!--width: 60px;-->
+                   <!--padding-left: 2px;-->
+                   <!--position: relative;-->
+                   <!--top: -2px;-->
+                   <!--margin-right: 9px;-->
+                   <!--padding-right: 2px;">-->
+                  <!--<small style="-->
+                      <!--font-weight: bold;-->
+                      <!--top: -2px;-->
+                      <!--position: relative;">-->
+                    <!--Write Review</small>-->
+                <!--</a>-->
+                <a class="article-source-name" style="font-size: 11px;">{{article.source.name}}  &nbsp;•&nbsp; </a>
+
+                <a style="cursor: default;color: #9c9c9d; position: relative; top: -2px;   font-size: 11px;">published {{article.publishedAt | timeAgo}}</a>
+                <!--<button style="cursor: not-allowed; visibility: hidden;" class="btn btn-space btn-secondary btn-xs"><i class="icon icon-left mdi mdi-share"></i>Share</button>-->
+
+              </div>
+            </div>
+            <img data-toggle="modal" data-target="#popup-image" (click)="setImage(article.urlToImage)" style="display: inherit; cursor: pointer;" class="card-img-top article-image" src="{{article.urlToImage}}" alt="Placeholder">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3" style="position: relative;right: 12px;">
+        <div class="card article-card">
+          <div class="tab-container">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item"><a class="nav-link active" href="#reviews" data-toggle="tab" role="tab">Top Sources</a></li>
+              <!--<li class="nav-item"><a class="nav-link" href="#posts" data-toggle="tab" role="tab">Posts</a></li>-->
+              <!--<li class="nav-item"><a class="nav-link" href="#comments" data-toggle="tab" role="tab">Comments</a></li>-->
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="reviews" role="tabpanel">
+                <p>We are still working on this feature!</p>
+
+              </div>
+              <!--<div class="tab-pane" id="posts" role="tabpanel">-->
+              <!--<h4>Feature coming soon!</h4>-->
+              <!--</div>-->
+              <div class="tab-pane" id="comments" role="tabpanel">
+                <h4>Feature coming soon!</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="vote-on-article" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div *ngIf="isUpvote" class="card-header">Rate to Upvote</div>
+        <div *ngIf="!isUpvote" class="card-header">Rate to Downvote</div>
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <!--<div class="text-center">-->
+        <!--<div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>-->
+        <!--<h3>Awesome!</h3>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Fusce ultrices euismod lobortis.</p>-->
+        <!--<div class="mt-8">-->
+        <!--<button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>-->
+        <!--<button class="btn btn-space btn-success" type="button" data-dismiss="modal">Proceed</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="main-content container-fluid" style="margin-top: -60px;padding-bottom: 0px; padding-left: 0px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div id="ratings-wrapper-el" class="card-body">
+                  <hr/>
+
+                  <!--<div style="margin-left: 25%; height: 71px; width: 176px;" class="icon">-->
+                  <!--<span style="-->
+                  <!--font-size: 17px;-->
+                  <!--position: relative;-->
+                  <!--top: -7px;-->
+                  <!--margin-right: 3px;-->
+                  <!--" class="title">Article Rating</span>-->
+                  <!--<span style="font-weight: bold; font-size: 42px;" class="mdi">{{overallRating}}</span>-->
+                  <!--</div>-->
+                  <!--<form action="#">-->
+                  <!--<div style="width: 100%">-->
+                    <!--<p style="text-align: center;"><span style="font-size: 30px;">→</span> good</p>-->
+                    <!--<p style="text-align: center;"><span style="font-size: 30px;">←</span> bad</p>-->
+                  <!--</div> -->
+
+                  <div class="accuracy-popover-anchor row"></div>
+                  <div (click)="toggleAccuracy()"  class="form-group row accuracy-wrapper">
+                    <button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-accuracy-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how accurate the article is...">
+                      <label class="col-12 col-sm-3 col-form-label text-sm-right accuracy-label">Accuracy</label>
+                    </button>
+                    <div class="col-12 col-sm-12 col-lg-6 mt-2">
+                      <small style="position: absolute; top: -15px; font-size: 75%;">← less</small>
+                      <small style="position: absolute; top: -15px; right: 41px; font-size: 75%;">more accurate→</small>
+                      <div class="accuracy-rating-wrap" style="width: 100%;">
+
+                      </div>
+                    </div>
+                    <h5 class="accuracy-rating">{{accuracyRating}}/5</h5>
+                  </div>
+
+                  <div class="bias-popover-anchor row"></div>
+                  <div (click)="toggleBias()"  class="form-group row bias-wrapper">
+                    <button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-bias-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how biased the article is...">
+                      <label class="col-12 col-sm-3 col-form-label text-sm-right bias-label">Bias</label>
+                    </button>
+                    <div class="col-12 col-sm-12 col-lg-6 mt-2">
+                      <small style="position: absolute; top: -15px; font-size: 75%;">← more biased</small>
+                      <small style="position: absolute; top: -15px; right: 41px; font-size: 75%;">less→</small>
+                      <div style="width: 100%" class="bias-rating-wrap">
+
+                      </div>
+                    </div>
+                    <h5 class="bias-rating">{{biasRating}}/5</h5>
+                  </div>
+
+                  <div class="sensationalism-popover"></div>
+                  <div (click)="toggleSensationalism()" class="form-group row sensationalism-wrapper">
+                    <button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs example-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how superficial, sensational, and headline-grabbing the article is...">
+                      <label class="col-12 col-sm-3 col-form-label text-sm-right sensationalism-label"> Sensationalism</label>
+                    </button>
+                    <div class="col-12 col-sm-12 col-lg-6 mt-2">
+                      <small style="position: absolute; top: -15px; font-size: 75%;">← more sensational</small>
+                      <small style="position: absolute; top: -15px; right: 41px; font-size: 75%;">less→</small>
+                      <div class="sensationalism-rating-wrap" style="width: 100%">
+
+                      </div>
+                    </div>
+                    <h5 class="sensationalism-rating">{{sensationalismRating}}/5</h5>
+                  </div>
+                </div>
+                <div *ngIf="!isUpvote" class="form-group row">
+                  <label class="col-12 col-sm-3 col-form-label text-sm-right" style="font-weight: bold;">Fake News</label>
+                  <div class="col-12 col-sm-8 col-lg-6 pt-1">
+                    <div (click)="toggleIsFakeNews()" class="switch-button switch-button-warning switch-button-yesno">
+                      <input type="checkbox" name="swt6" id="swt6">
+                      <span><label for="swt6"></label></span>
+                    </div>
+                  </div>
+                </div>
+                <div style="float: right;">
+
+                  <button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                  <button *ngIf="isUpvote" (click)="submitVote()" class="btn btn-space btn-primary" type="button" data-dismiss="modal">Upvote</button>
+                  <button *ngIf="!isUpvote" (click)="submitVote()" class="btn btn-space btn-primary" type="button" data-dismiss="modal">Downvote</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="modal-footer"></div>-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="popup-image" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" style="padding-top: 25px;">
+        <button style="position: absolute; right: 3px; top: 3px;" class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+        <img data-dismiss="modal" style="width: 100%;" class="card-img-top" src="{{popupImage}}" alt="Placeholder">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="view-article" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" style="padding-top: 25px;">
+        <button style="position: absolute; right: 3px; top: 3px;" class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+        <iframe data-dismiss="modal" style="width: 100%; height: 95vh;" src="http://www.espn.com/nfl/story/_/id/24702601/patrick-mahomes-sets-3-game-nfl-touchdown-record-10th-score"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--<div class="modal fade" id="mod-success" tabindex="-1" role="dialog">-->
+  <!--<div class="modal-dialog">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-header">-->
+        <!--<div class="card-header">Review Article<span class="card-subtitle">Write a review that heavily effects this article's ranking!</span></div>-->
+        <!--<button class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>-->
+      <!--</div>-->
+      <!--<div class="modal-body">-->
+        <!--&lt;!&ndash;<div class="text-center">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<h3>Awesome!</h3>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Fusce ultrices euismod lobortis.</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="mt-8">&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="btn btn-space btn-success" type="button" data-dismiss="modal">Proceed</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="main-content container-fluid" style="margin-top: -60px;padding-bottom: 0px; padding-left: 0px !important;">-->
+          <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+              <!--<div class="card">-->
+                <!--<div class="card-body">-->
+                  <!--<hr/>-->
+                  <!--&lt;!&ndash;<form action="#">&ndash;&gt;-->
+                  <!--<div class="sensationalism-popover"></div>-->
+                  <!--<div (click)="toggleSensationalism()" class="form-group row sensationalism-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs example-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how superficial, sensational, and headline-grabbing the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right sensationalism-label">Sensationalism</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control sensationalism-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="sensationalism-rating">{{sensationalismRating}}/10</h5>-->
+                  <!--</div>-->
+
+
+                  <!--<div class="accuracy-popover-anchor row"></div>-->
+                  <!--<div (click)="toggleAccuracy()"  class="form-group row accuracy-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-accuracy-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how accurate the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right accuracy-label">Accuracy</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control accuracy-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="accuracy-rating">{{accuracyRating}}/10</h5>-->
+                  <!--</div>-->
+
+                  <!--<div class="bias-popover-anchor row"></div>-->
+                  <!--<div (click)="toggleBias()"  class="form-group row bias-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-bias-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how biased the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right bias-label">Bias</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control bias-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="bias-rating">{{biasRating}}/10</h5>-->
+                  <!--</div>-->
+                  <!--<hr/>-->
+                  <!--<form>-->
+                    <!--<div class="form-group row mt-2">-->
+                      <!--<div class="col-9 col-lg-12">-->
+                        <!--<input class="form-control" id="inputEmail2" type="email" placeholder="Review Title">-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</form>-->
+
+                  <!--&lt;!&ndash;</form>&ndash;&gt;-->
+                  <!--<div id="editor1"></div>-->
+
+
+
+                <!--</div>-->
+                <!--<div style="float: right;">-->
+
+                  <!--<button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>-->
+                  <!--<button (click)="getReviewCode()" class="btn btn-space btn-primary" type="button" data-dismiss="modal">Submit Review</button>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;<div class="modal-footer"></div>&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->

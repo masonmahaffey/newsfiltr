@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/img/logo-fav.png">
+  <title>newsfiltr</title>
+  <link rel="stylesheet" type="text/css" href="assets/lib/jquery.magnific-popup/magnific-popup.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/summernote/summernote-bs4.css"/>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/jqvmap/jqvmap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700|Raleway:700" rel="stylesheet">
+
+  <style>
+    .navbar-brand {
+      background-image: none !important;
+    }
+  </style>
+</head>
+<body class="fixed-left">
+	<app-root></app-root>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/af.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="assets/lib/summernote/summernote-bs4.min.js" type="text/javascript"></script>
+  <script src="assets/lib/summernote/summernote-ext-beagle.js" type="text/javascript"></script>
+  <script src="assets/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+  <script src="assets/js/app.js" type="text/javascript"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125393722-1"></script>
+  <script src="assets/lib/jquery.magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" type="text/javascript"></script>
+  <script src="assets/lib/chartjs/Chart.min.js" type="text/javascript"></script>
+  <script src="assets/js/app-charts-chartjs.js" type="text/javascript"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125393722-1');
+  </script>
+
+  <script>
+    $(document).ready(function(){
+
+      function intializeExpandableMenu() {
+        $('#editor1').summernote({
+          height: 300
+        });
+
+
+
+        // $('#mod-success').summernote({
+        //   height: 300
+        // });
+
+
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('.article-bias-rating-popover').popover({
+          container: '.bias-popover-anchor'
+        });
+
+        $('.article-accuracy-rating-popover').popover({
+          container: '.accuracy-popover-anchor'
+        });
+
+        $('.example-popover').popover({
+          container: '.sensationalism-popover'
+        });
+
+        //Bootstrap Slider
+        $('.bslider').bootstrapSlider();
+
+        $('.be-left-sidebar').click(function(){
+          $('.left-sidebar-toggle').toggleClass('open');
+          $('.left-sidebar-spacer').toggleClass('open');
+        });
+      }
+
+      intializeExpandableMenu();
+
+      var home = window.location.pathname;
+      var lastlocation = home;
+      setInterval(() => {
+          var location = window.location.pathname;
+          if(location != lastlocation) {
+            intializeExpandableMenu();
+          }
+          lastlocation = location;
+        }, 250);
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+{
+  "options": {
+    "destPrefix": "src/assets/lib/"
+  },
+  "beagle-resources":{
+    "files":{
+      "summernote":"beagle-resources/summernote/*",
+      "dropzone" : "beagle-resources/dropzone/*",
+      "jquery-flot/plugins" : "beagle-resources/jquery-flot/jquery.flot.orderBars.js",
+      "jquery.vectormap" : "beagle-resources/jquery.vectormap/*",
+      "jquery.gritter/images" : "beagle-resources/jquery.gritter/images/*"
+    }
+  },
+  "bootstrap":{
+    "files": {
+      "bootstrap/scss" : "bootstrap/scss/*",
+      "bootstrap/dist" : "bootstrap/dist/*"
+    }
+  },
+  "bootstrap-wysiwyg":{
+    "files":{
+      "summernote" : "summernote/dist/*"
+    }
+  },
+  "bs4-breakpoint-check":{
+    "files":{
+      "bs4-breakpoint-check" : "bs4-breakpoint-check/js/*"
+    }
+  },
+  "chart.js":{
+    "files":{
+      "chartjs" : "chart.js/dist/*"
+    }
+  },
+  "codemirror":{
+    "files":{
+      "jquery.codemirror" : "codemirror/*"
+    }
+  },
+  "countup.js":{
+    "files":{
+      "countup" : "countup.js/dist/*"
+    }
+  },
+  "datatables":{
+    "files":{
+      "datatables/datatables.net/js":"datatables.net/js/*",
+      "datatables/datatables.net-bs4/js":"datatables.net-bs4/js/*",
+      "datatables/datatables.net-bs4/css":"datatables.net-bs4/css/*",
+      "datatables/pdfmake":"pdfmake/build/*",
+      "datatables/jszip":"jszip/dist/*"
+    }
+  },
+  "datatables-buttons":{
+    "files":{
+      "datatables/datatables.net-buttons/js":"datatables.net-buttons/js/*",            
+      "datatables/datatables.net-buttons-bs4/js":"datatables.net-buttons-bs4/js/*",
+      "datatables/datatables.net-buttons-bs4/css":"datatables.net-buttons-bs4/css/*"
+    }
+  },
+  "dropzone":{
+    "files":{
+      "dropzone" : "dropzone/dist/*"
+    }
+  },
+  "fastclick":{
+    "files":{
+      "fastclick" : "@foxythemes/fastclick/lib/fastclick.js"
+    }
+  },
+  "flot.curvedlines":{
+    "files":{
+      "jquery-flot/plugins" : "flot.curvedlines/curvedLines.js"
+    }
+  },
+  "flot.tooltip":{
+    "files":{
+      "jquery-flot/plugins" : "jquery.flot.tooltip/js/jquery.flot.tooltip.js"
+    }
+  },
+  "foxythemes-datetimepicker":{
+    "files":{
+      "datetimepicker/css" : "@foxythemes/bootstrap-datetime-picker-bs4/css/*",
+      "datetimepicker/js" : "@foxythemes/bootstrap-datetime-picker-bs4/js/*"
+    }
+  },
+  "foxythemes-gritter":{
+    "files":{
+      "jquery.gritter" : "@foxythemes/gritter/*"
+    }
+  },
+  "fuelux":{
+    "files":{
+      "fuelux/js" : "fuelux/js/wizard.js"
+    }
+  },
+  "fullcalendar":{
+    "files":{
+      "jquery.fullcalendar" : "fullcalendar/dist/*"
+    }
+  },  
+  "google-code-prettify":{
+    "files":{
+      "prettify" : "code-prettify/src/*"
+    }
+  },
+  "jquery":{
+    "files":{
+      "jquery" : "jquery/dist/*"
+    }
+  },
+  "jquery-flot":{
+    "files":{
+      "jquery-flot" : "jquery-flot/*"
+    }
+  },
+  "jquery.maskedinput":{
+    "files":{
+      "jquery.maskedinput" : "jquery.maskedinput/src/*"
+    }
+  },
+  "jquery-nestable":{
+    "files":{
+      "jquery.nestable" : "@foxythemes/jquery-nestable/*"
+    }
+  },
+  "jquery-niftymodals-methods":{
+    "files":{
+      "jquery.niftymodals" : "jquery.niftymodals/src/*"
+    }
+  },
+  "jquery-touchswipe":{
+    "files":{
+      "jquery-touchswipe":"jquery-touchswipe/jquery.touchSwipe.min.js"
+    }
+  },
+  "jquery-ui":{
+    "files":{
+      "jquery-ui" : "components-jqueryui/jquery-ui.min.js"
+    }
+  },
+  "jvectormap":{
+    "files":{
+      "jquery.vectormap" : "@foxythemes/jvectormap/*"
+    }
+  },
+  "jqvmap":{
+    "files":{
+      "jqvmap" : "jqvmap/dist/*"
+    }
+  },
+  "kapusta-jquery.sparkline":{
+    "files":{
+      "jquery.sparkline" : "@foxythemes/sparkline/dist/*"
+    }
+  },  
+  "magnific-popup":{
+    "files":{
+      "jquery.magnific-popup" : "magnific-popup/dist/*"
+    }
+  },
+  "masonry":{
+    "files":{
+      "masonry-layout" : "masonry-layout/dist/*"
+    }
+  },
+  "material-design-iconic-font":{
+    "files":{
+      "material-design-icons/less" : "@foxythemes/material-design-iconic-font/less/*",
+      "material-design-icons/css" : "@foxythemes/material-design-iconic-font/dist/css/*",
+      "material-design-icons/fonts" : "@foxythemes/material-design-iconic-font/dist/fonts/*"
+    }
+  },
+  "moment":{
+    "files":{
+      "moment.js" : "moment/*"
+    }
+  },
+  "morris.js":{
+    "files":{
+      "morrisjs" : "@foxythemes/morris.js/*"
+    }
+  },
+  "mprogress":{
+    "files":{
+      "mprogress/":"mprogress/build/*"
+    }
+  },
+  "multiselect":{
+    "files":{
+      "multiselect/css":"multiselect/css/multi-select.css",
+      "multiselect/js":"multiselect/js/jquery.multi-select.js",
+      "multiselect/img":"multiselect/img/*"
+    }
+  },
+  "parsleyjs":{
+    "files":{
+      "parsley" : "parsleyjs/dist/*"
+    }
+  }, 
+  "perfect-scrollbar":{
+    "files":{
+      "perfect-scrollbar/js" : "perfect-scrollbar/dist/*",
+      "perfect-scrollbar/css" : "perfect-scrollbar/css/*"
+    }
+  },
+  "quicksearch":{
+    "files":{
+      "quicksearch":"jquery.quicksearch/dist/*"
+    }
+  },
+  "raphael":{
+    "files":{
+      "raphael":"raphael/raphael.min.js"
+    }
+  },
+  "roboto-fontface":{
+    "files":{
+      "roboto" : "roboto-fontface/fonts/*"
+    }
+  },
+  "select2":{
+    "files":{
+      "select2" : "select2/dist/*"
+    }
+  }, 
+  "seiyria-bootstrap-slider":{
+    "files":{
+      "bootstrap-slider" : "bootstrap-slider/dist/*"
+    }
+  },
+  "tinycolor":{
+    "files":{
+      "tinycolor":"tinycolor2/dist/*"
+    }
+  }
+}

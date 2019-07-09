@@ -1,0 +1,91 @@
+.description-more {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+}
+.description-more:hover {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*#ea4335*/
+.login-button, .signup-button {
+  cursor: pointer; font-weight: bold;
+}
+.review-author {
+  position: relative;top: -34px;
+  /*font-weight: bold;*/
+}
+.review-description-more {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+}
+.review-description-more:hover {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-button:hover, .signup-button:hover {
+  color: red;
+}
+
+.page-aside {
+  left: 0px !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.profile-reviews:hover {
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+/*description*/
+.edit-description {
+  position: relative; left: 5px;
+  cursor: pointer;
+  visibility: hidden;
+}
+.acct-description:hover .edit-description{
+  visibility: visible;
+}
+
+.description-more {
+  visibility: visible;
+}
+
+
+.edit-description:hover {
+  text-decoration: underline;
+}
+
+
+/* tagline */
+.edit-tagline {
+  position: relative; left: 5px;
+  cursor: pointer;
+  visibility: hidden;
+}
+.acct-tagline:hover .edit-tagline {
+  visibility: visible;
+}
+.edit-tagline:hover {
+  text-decoration: underline;
+}
+
+/* Name*/
+.edit-name {
+  position: relative; left: 5px;
+  cursor: pointer;
+  visibility: hidden;
+  font-weight: normal;
+  font-size: 14px;
+  color: #5f5f5f;
+}
+.acct-name:hover .edit-name {
+  visibility: visible;
+}
+.edit-name:hover {
+  text-decoration: underline;
+}

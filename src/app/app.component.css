@@ -1,0 +1,12 @@
+.cursor-hand {
+  cursor: pointer !important;
+}
+
+.fade-in-message {
+  animation: fadein 2s !important;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

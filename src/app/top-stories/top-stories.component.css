@@ -1,0 +1,680 @@
+.article-button-row {
+  position: relative; top: -25px;
+}
+.hide-this-el {
+  display: none !important;
+}
+.upvote-count {
+  position: absolute;
+  left: 26px;
+  top: -28px;
+  color: black;
+  font-weight: bolder;
+}
+.article-source-name {
+  cursor: pointer;
+  color: #9c9c9d !important;
+  position: relative;
+  top: -2px;
+}
+.article-source-name:hover {
+  color: red !important;
+  cursor: pointer;
+}
+.vote-arrows {
+  color: grey;
+}
+
+.vote-arrows:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.vote-arrows-voted {
+  color: red;
+  cursor: pointer;
+}
+
+.vote-arrows-clicked {
+  color: red;
+  cursor: pointer;
+}
+
+.downvote-arrow {
+  position: absolute;
+  left: 25px;
+  top: -8px;
+  font-size: 27px;
+}
+
+.upvote-arrow {
+  position: absolute;
+  left: 25px;
+  bottom: 49px;
+  font-size: 27px;
+}
+
+.article-image {
+  /*width: 120px;*/
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.article-content-text-wrapper {
+  display: inline-block;
+  padding: 10px;
+}
+
+.article-title {
+  /*font-weight: bold;*/
+}
+
+.article-description {
+  /*will add some sort of wrap around in the small so that it gets clipped or something to that effect*/
+}
+.article-to-be-continued {
+  right: -3px !important;;
+  bottom: -6px !important;;
+  position: absolute !important;;
+  font-size: 18px !important;;
+  font-weight: bolder !important;
+}
+@media screen and (min-width: 100px) and (max-width: 401px) {
+
+  .article-content-text-wrapper {
+    position: relative;
+    left: 50px;
+    width: 47%;
+  }
+  .article-description {
+    /*display: none;*/
+    overflow : hidden;
+    position: relative;
+    max-height: 36px;
+    display: none;
+    text-overflow: ellipsis;
+  }
+  .article-title {
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+    margin-bottom: 20px;
+    height: 70px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 81px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -46px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 64px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 380px;
+  }
+  .article-card {
+    height: 146px;
+  }
+}
+@media screen and (min-width: 402px) and (max-width: 443px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 70px;
+    width: 47%;
+  }
+  .article-description {
+    /*display: none;*/
+    overflow : hidden;
+    position: relative;
+    max-height: 36px;
+    display: none;
+    text-overflow: ellipsis;
+  }
+  .article-title {
+    font-size: 15px;
+    height: 70px;
+    position: relative;
+    top: -22px;
+    margin-bottom: 10px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 81px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -46px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 64px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 480px;
+    margin-top: 18px;
+  }
+  .article-card {
+    height: 146px;
+  }
+}
+
+@media screen and (min-width: 444px) and (max-width: 575px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 60px;
+    width: 65%;
+  }
+  .article-description {
+    /*display: none;*/
+    overflow : hidden;
+    position: relative;
+    max-height: 29px;
+    display: none;
+  }
+  .article-title {
+    font-size: 18px;
+    position: relative;
+    height:75px;
+    top: -25px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 77px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -42px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 480px;
+  }
+  .article-card {
+    height: 138px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    top: 2px;
+    width: 65%;
+  }
+  .article-description {
+    display: none;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    position: relative;
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 40px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 75px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -37px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -55px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+  .article-button-row {
+    margin-top:45px;
+    width: 480px;
+  }
+  .article-card {
+    height: 115px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 863px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 60%;
+  }
+  .article-description {
+    display: none;
+    overflow : hidden;
+    position: relative;
+    height: 34px;
+    /*display: none;*/
+  }
+  .article-title {
+    height: 75px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -33px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -50px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 18px;
+    /*right: 20px;*/
+  }
+  .article-card {
+    height: 132px;
+  }
+}
+@media screen and (min-width: 864px) and (max-width: 991px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 64%;
+  }
+  .article-description {
+    display: none;
+    overflow : hidden;
+    position: relative;
+    height: 34px;
+    /*display: none;*/
+  }
+  .article-title {
+    height: 75px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -33px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -50px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 18px;
+    /*right: 20px;*/
+  }
+  .article-card {
+    height: 132px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 70%;
+  }
+  .article-description {
+    /*display: none;*/
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    position: relative;
+    top: -18px;
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 45px;
+  }
+  .upvote-arrow {
+    position: absolute;
+    left: 30px;
+    bottom: 77px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 30px;
+    top: -43px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 30px;
+    top: -59px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 24px;
+    /*right: 20px;*/
+  }
+  .article-button-row {
+    margin-top:17px;
+    width: 480px;
+  }
+  .article-card {
+    height: 132px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 3%;
+    width: 67%;
+  }
+  .article-description {
+    /*display: none;*/
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    position: relative;
+    top: -28px;
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 45px;
+    top: -12px;
+    font-size: 17px;
+    position: relative;
+  }
+  .upvote-arrow {
+    position: absolute;
+    left: 35px;
+    bottom: 75px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 35px;
+    top: -41px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 35px;
+    top: -57px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-button-row {
+    margin-top:-3px;
+    width: 480px;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 20px;
+    /*right: 20px;*/
+  }
+  .article-card {
+    height: 132px;
+  }
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.article-title-a {
+  cursor: pointer !important;
+  font-weight: 500;
+}
+.article-title-a:hover {
+  color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sensationalism-popover {
+  position: relative; right: -10px; top: -30px;
+}
+.accuracy-popover-anchor {
+  position: relative; top: -90px; left: -1px;
+}
+.bias-popover-anchor {
+  position: relative; top: -153px;left: -17px;
+}
+
+
+.sensationalism-button {};
+.article-accuracy-rating-popover {};
+.article-bias-rating-popover {};
+
+.sensationalism-wrapper {}
+.accuracy-wrapper {
+  position: relative; left: 35px;
+}
+.bias-wrapper {
+  position: relative; left: 61px; margin-bottom: 20px;
+}
+
+.sensationalism-label {
+  position: relative;cursor: pointer;left: -61px;visibility: visible;font-size: 13px;
+}
+.accuracy-label {
+  position: relative;cursor: pointer;left: -61px;visibility: visible;font-size: 13px;
+}
+.bias-label {
+  position: relative;cursor: pointer;left: -58px;visibility: visible;font-size: 13px;
+}
+
+.sensationalism-rating {
+  position: relative;
+}
+.accuracy-rating {
+  position: relative;
+}
+.bias-rating {
+  position: relative;
+}
+
+
+/*@media (min-width: 576px)*/
+/*@media (min-width: 768px)*/
+/*@media (min-width: 992px)*/
+/*@media (min-width: 1200px) */
+@media screen and (max-width: 576px) {
+  .sensationalism-label {
+    left: -8px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -8px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -8px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .sensationalism-label {
+    left: -97px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -62px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -34px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .sensationalism-label {
+    left: -97px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -62px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -34px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+
+

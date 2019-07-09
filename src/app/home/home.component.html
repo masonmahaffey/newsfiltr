@@ -1,0 +1,353 @@
+<div class="notification-box" style="position: fixed;top: 70px;right: 10px;z-index: 10000;"></div>
+
+<div class="be-wrapper">
+  <nav class="navbar navbar-expand fixed-top be-top-header">
+    <div class="container-fluid">
+      <div class="be-navbar-header">
+        <a (click)="navigatePageTo('topStoriesActive')" routerLink="/" class="navbar-brand" style="cursor: pointer;background-image: none;">
+          <span style="font-size: 26px; font-weight: bolder; color: red;">newsfiltr</span>
+          <!--<span style="font-family: 'Raleway', cursive; font-size: 28px; font-weight: bolder; color: #b92c27;">newsfiltr</span>-->
+          <small style="color: black;">fight fake news</small>
+        </a>
+      </div>
+      <div class="be-right-navbar">
+        <ul *ngIf="auth == 1" class="nav navbar-nav float-right be-user-nav">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
+          <div class="dropdown-menu" role="menu">
+            <div class="user-info">
+              <div class="user-name">Túpac Amaru</div>
+              <div class="user-position online">Available</div>
+            </div>
+            <a style="cursor: pointer;" class="dropdown-item" (click)="navigatePageTo('accountActive')" ><span class="icon mdi mdi-face"></span>Profile</a>
+            <a style="cursor: pointer;" class="dropdown-item" (click)="navigatePageTo('settingsActive')"><span class="icon mdi mdi-settings"></span>Settings</a>
+            <a (click)="logout()" style="cursor: pointer;" class="dropdown-item"><span class="icon mdi mdi-power"></span>Logout</a>
+          </div>
+        </li>
+        </ul>
+        <!--<div class="page-title"><span>Headlines</span></div>-->
+        <ul *ngIf="auth == 1" class="nav navbar-nav float-right be-icons-nav">
+          <!--<li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"></span></a></li>-->
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
+            <ul class="dropdown-menu be-notifications">
+              <li>
+                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                <div class="list">
+                  <div class="be-scroller">
+                    <div class="content">
+                      <ul>
+                        <li class="notification notification-unread"><a href="#">
+                          <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
+                          <div class="notification-info">
+                            <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
+                          </div></a></li>
+                        <li class="notification"><a href="#">
+                          <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
+                          <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer"> <a routerLink="/notifications" style="cursor: pointer;margin-top: 74px;">View all notifications</a></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div *ngIf="auth == 0" style="margin-right: 20px;">
+          <ul  class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span routerLink="/signup" class="signup-button">Sign Up</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span routerLink="/login" class="login-button" style="margin-right: 5px;margin-left:50px;">Log In</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right be-user-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                  <span style="font-size: 26px; font-weight: bolder; color: white; margin-right:20px;">newsfiltr</span>
+              </a>
+            </li>
+          </ul>
+
+
+
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </nav>
+  <div class="be-left-sidebar">
+    <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" style="cursor: pointer;">Menu</a>
+      <div class="left-sidebar-spacer">
+        <div class="left-sidebar-scroll">
+          <div class="left-sidebar-content">
+            <ul class="sidebar-elements">
+              <li class="divider"></li>
+              <li class="{{topStoriesActive}}"><a (click)="navigatePageTo('topStoriesActive')" style="cursor: pointer;"><i class="icon mdi mdi-home"></i><span>Top Stories</span></a></li>
+              <li class="{{breakingActive}}"><a (click)="navigatePageTo('breakingActive')" style="cursor: pointer;"><i class="icon mdi mdi-alert-octagon"></i><span>Breaking</span></a></li>
+              <li class="{{worldActive}}"><a (click)="navigatePageTo('worldActive')" style="cursor: pointer;"><i class="icon mdi mdi-map"></i><span>World</span></a></li>
+              <li class="{{businessActive}}"><a (click)="navigatePageTo('businessActive')" style="cursor: pointer;"><i class="icon mdi mdi-money"></i><span>Business</span></a></li>
+              <li class="{{technologyActive}}"><a (click)="navigatePageTo('technologyActive')" style="cursor: pointer;"><i class="icon mdi mdi-memory"></i><span>Technology</span></a></li>
+              <li class="{{sportsActive}}"><a (click)="navigatePageTo('sportsActive')" style="cursor: pointer;"><i class="icon mdi mdi-walk"></i><span>Sports</span></a></li>
+              <li class="divider">Options</li>
+              <li class="{{topUsersActive}}"><a (click)="navigatePageTo('topUsersActive')" style="cursor: pointer;"><i class="icon mdi mdi-accounts"></i><span>Top Writers</span></a></li>
+              <!--<li class="{{electionActive}}"><a (click)="navigatePageTo('electionActive')" style="cursor: pointer;"><i class="icon mdi mdi-map"></i><span>Election</span></a></li>-->
+              <!--<li class="{{sourcesActive}}"><a (click)="navigatePageTo('sourcesActive')" style="cursor: pointer;"><i class="icon mdi mdi-star-half"></i><span>Sources</span></a></li>-->
+              <!--<li><a href="documentation.html"><i class="icon mdi mdi-accounts"></i><span>Top Authors</span></a></li>-->
+              <li class="{{aboutActive}}"><a (click)="navigatePageTo('aboutActive')" style="cursor: pointer;"><i class="icon mdi mdi-help"></i><span>About</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="progress-widget">
+        <div class="progress-data"><span class="progress-value">60%</span><span class="name">Election Cycle</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" style="width: 60%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="be-content">
+    <div style="padding-top: 15px;" class="main-content container-fluid">
+      <!--loading-->
+      <div *ngIf="loading">
+        <p style="text-align: center; margin-top: 20vh;">
+          <i class="fa fa-circle-o-notch fa-spin fast-spin" style="font-size:44px; color: red;"></i>
+        </p>
+      </div>
+
+      <div *ngIf="!loading" class="content-wrapper-here hide-everything">
+        <!--content goes here-->
+        <div *ngIf="topStoriesActive == 'active'">
+          <app-top-stories></app-top-stories>
+        </div>
+        <div *ngIf="accountActive == 'active'">
+          <app-account></app-account>
+        </div>
+        <div *ngIf="settingsActive == 'active'">
+          <app-settings></app-settings>
+        </div>
+        <div *ngIf="topUsersActive == 'active'">
+          <app-top-writers></app-top-writers>
+        </div>
+        <div *ngIf="aboutActive == 'active'">
+          <app-about></app-about>
+        </div>
+        <!-- end content-->
+      </div>
+    </div>
+  </div>
+  <nav class="be-right-sidebar">
+    <div class="sb-content">
+      <div class="tab-navigation">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
+        </ul>
+      </div>
+      <div class="tab-panel">
+        <div class="tab-content">
+          <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+            <div class="chat-contacts">
+              <div class="chat-sections">
+                <div class="be-scroller-chat">
+                  <div class="content">
+                    <h2>Recent</h2>
+                    <div class="contact-list contact-list-recent">
+                      <div class="user"><a href="#"><img src="assets/img/avatar1.png" alt="Avatar">
+                        <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar2.png" alt="Avatar">
+                        <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar3.png" alt="Avatar">
+                        <div class="user-data"><span class="status offline"></span><span class="name">Joel King		</span><span class="message">Ready for the meeti...</span></div></a></div>
+                    </div>
+                    <h2>Contacts</h2>
+                    <div class="contact-list">
+                      <div class="user"><a href="#"><img src="assets/img/avatar4.png" alt="Avatar">
+                        <div class="user-data2"><span class="status"></span><span class="name">Mike Bolthort</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar5.png" alt="Avatar">
+                        <div class="user-data2"><span class="status"></span><span class="name">Maggie jackson</span></div></a></div>
+                      <div class="user"><a href="#"><img src="assets/img/avatar6.png" alt="Avatar">
+                        <div class="user-data2"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-input">
+                <input type="text" placeholder="Search..." name="q"><span class="mdi mdi-search"></span>
+              </div>
+            </div>
+            <div class="chat-window">
+              <div class="title">
+                <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
+                  <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                </div><span class="icon return mdi mdi-chevron-left"></span>
+              </div>
+              <div class="chat-messages">
+                <div class="be-scroller-messages">
+                  <div class="content">
+                    <ul>
+                      <li class="friend">
+                        <div class="msg">Hello</div>
+                      </li>
+                      <li class="self">
+                        <div class="msg">Hi, how are you?</div>
+                      </li>
+                      <li class="friend">
+                        <div class="msg">Good, I'll need support with my pc</div>
+                      </li>
+                      <li class="self">
+                        <div class="msg">Sure, just tell me what is going on with your computer?</div>
+                      </li>
+                      <li class="friend">
+                        <div class="msg">I don't know it just turns off suddenly</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-input">
+                <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
+                  <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
+            <div class="todo-container">
+              <div class="todo-wrapper">
+                <div class="be-scroller-todo">
+                  <div class="todo-content"><span class="category-title">Today</span>
+                    <ul class="todo-list">
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox" checked=""><span class="custom-control-label">Initialize the project</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                        </label>
+                      </li>
+                    </ul><span class="category-title">Tomorrow</span>
+                    <ul class="todo-list">
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Initialize the project							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                          <input class="custom-control-input" type="checkbox"><span class="custom-control-label" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-input">
+                <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
+            <div class="settings-wrapper">
+              <div class="be-scroller-settings"><span class="category-title">General</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st1" id="st1"><span>
+                            <label for="st1"></label></span>
+                    </div><span class="name">Available</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st2" id="st2"><span>
+                            <label for="st2"></label></span>
+                    </div><span class="name">Enable notifications</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st3" id="st3"><span>
+                            <label for="st3"></label></span>
+                    </div><span class="name">Login with Facebook</span>
+                  </li>
+                </ul><span class="category-title">Notifications</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st4" id="st4"><span>
+                            <label for="st4"></label></span>
+                    </div><span class="name">Email notifications</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st5" id="st5"><span>
+                            <label for="st5"></label></span>
+                    </div><span class="name">Project updates</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" checked="" name="st6" id="st6"><span>
+                            <label for="st6"></label></span>
+                    </div><span class="name">New comments</span>
+                  </li>
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st7" id="st7"><span>
+                            <label for="st7"></label></span>
+                    </div><span class="name">Chat messages</span>
+                  </li>
+                </ul><span class="category-title">Workflow</span>
+                <ul class="settings-list">
+                  <li>
+                    <div class="switch-button switch-button-sm">
+                      <input type="checkbox" name="st8" id="st8"><span>
+                            <label for="st8"></label></span>
+                    </div><span class="name">Deploy on commit</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

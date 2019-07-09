@@ -1,0 +1,116 @@
+<script src="../../../../marketscanr-beta/src/app/home/home.component.ts"></script>
+<div class="main-content container-fluid" style="padding-top: 10px !important;">
+  <div class="user-profile">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="user-info-list card">
+          <div class="card">
+            <!--<div class="card-header">Default Tabs</div>-->
+            <div class="tab-container">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#account" data-toggle="tab" role="tab">Account</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="#privacy" data-toggle="tab" role="tab">Privacy</a></li>-->
+                <!--<li class="nav-item"><a class="nav-link" href="#notifications" data-toggle="tab" role="tab">Notifications</a></li>-->
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="account" role="tabpanel">
+                  <!--<div class="form-group row">-->
+                    <!--<label class="col-12 col-sm-3 col-form-label text-sm-right">Make Profile Private?</label>-->
+                    <!--<div class="col-12 col-sm-8 col-lg-6 pt-1">-->
+                      <!--<div class="switch-button switch-button-yesno">-->
+                        <!--<input type="checkbox" checked="" name="swt8" id="swt8"><span>-->
+                            <!--<label for="swt8"></label></span>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="form-group row">-->
+                    <!--<label class="col-12 col-sm-3 col-form-label text-sm-right">Email notifications?</label>-->
+                    <!--<div class="col-12 col-sm-8 col-lg-6 pt-1">-->
+                      <!--<div class="switch-button switch-button-yesno">-->
+                        <!--<input type="checkbox" checked="" name="swt8" id="swt8"><span>-->
+                            <!--<label for="swt8"></label></span>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div>-->
+                    <!--<button data-toggle="modal" data-target="#new-password" class="btn btn-space btn-primary">Change Password</button>-->
+                  <!--</div>-->
+                  <div style="margin-top: 8px;">
+                    <button data-toggle="modal" data-target="#cancel-subscription" class="btn btn-space btn-primary">Cancel Subscription</button>
+                  </div>
+                  <hr/>
+                  <div style="margin-top: 15px;" class="form-group row signup-password">
+                    <div class="col-12" style="margin-bottom: 20px;">
+                      <input [(ngModel)]="currentpassword" class="form-control" id="pass1" name="password"  type="password" required="" placeholder="Current Password">
+                    </div>
+                    <div class="col-6">
+                      <input [(ngModel)]="newpassword" class="form-control" id="pass1" name="password"  type="password" required="" placeholder="New Password">
+                    </div>
+                    <div class="col-6">
+                      <input [(ngModel)]="confirmnewpassword" class="form-control" name="confirm"  type="password" required="" placeholder="Confirm New Password">
+                    </div>
+                    <div style="margin-top: 20px;" class="col-12">
+                      <button (click)="submitNewPassword()" data-dismiss="modal" class="btn btn-space btn-primary btn-lg">Save</button>
+                    </div>
+                  </div>
+
+
+                <div class="tab-pane" id="privacy" role="tabpanel">
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="notifications" role="tabpanel">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="new-password" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" style="padding-top: 25px;">
+        <button style="position: absolute; right: 3px; top: 3px;" class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+        <div style="margin-top: 15px;" class="form-group row signup-password">
+          <div class="col-6">
+            <input [(ngModel)]="newpassword" class="form-control" id="pass1" name="password"  type="password" required="" placeholder="New Password">
+          </div>
+          <div class="col-6">
+            <input [(ngModel)]="confirmnewpassword" class="form-control" name="confirm"  type="password" required="" placeholder="Confirm New Password">
+          </div>
+          <div style="margin-top: 20px;" class="col-12">
+            <button (click)="submitNewPassword()" data-dismiss="modal" class="btn btn-space btn-primary btn-lg">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="cancel-subscription" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" style="padding-top: 25px;">
+        <button style="position: absolute; right: 3px; top: 3px;" class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+        <div style="margin-top: 15px;" class="form-group row signup-password">
+          <div class="col-12">
+            <p style="font-size: 22px; font-weight: bold;">Are you sure you want to cancel your subscription?</p>
+          </div>
+          <div style="margin-top: 20px;" class="col-12">
+            <button (click)="cancelSubscription()" data-dismiss="modal" class="btn btn-space btn-primary btn-lg">Cancel Subscription</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,248 @@
+<div class="main-content container-fluid" style="padding: 0px; margin-top: -11px; margin-left: 3px;padding-right: 5px;">
+  <div class="user-profile">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="user-display" style="margin-top: 12px;">
+          <div class="user-display-bg">
+            <!--<img src="assets/img/user-profile-display.png" alt="Profile Background">-->
+          </div>
+          <div class="user-display-bottom">
+            <div class="user-display-avatar" style="top: 14px;">
+              <img style="height: 98px; width: 98px;" src="assets/img/avatar-150.png" alt="Avatar">
+            </div>
+            <div class="user-display-info" style="padding-bottom: 20px;">
+              <div *ngIf="displayname">
+                <div class="name acct-name" style="font-size: 24px;">{{displayname}} <span data-toggle="modal" data-target="#edit-user" class="edit-name">Edit</span></div>
+              </div>
+              <div *ngIf="tagline.length > 0" style="font-size: 14px;" class="nick acct-tagline">{{tagline}} <span data-toggle="modal" data-target="#edit-user" class="edit-tagline">Edit</span></div>
+              <div *ngIf="!tagline.length > 0" style="font-size: 14px;" class="nick acct-tagline"> You have no tagline! <span data-toggle="modal" data-target="#edit-user" class="edit-tagline">Edit</span></div>
+              <div *ngIf="description.length > 0 && !descriptionExpanded" class="nick acct-description" style="font-size: 13px;margin-top: 10px;">
+                <div>{{clipReviewBody(description)}} ...</div>
+                <span (click)="toggleDescriptionExpand()" class="description-more">(more)</span>
+                <span data-toggle="modal" data-target="#edit-user" class="edit-description">Edit</span>
+              </div>
+              <div *ngIf="description.length > 0 && descriptionExpanded" class="nick acct-description" style="font-size: 13px;margin-top: 10px;">
+                <div [innerHTML]="description"></div>
+                <span (click)="toggleDescriptionExpand()" class="description-more">(collapse)</span>
+                <span data-toggle="modal" data-target="#edit-user" class="edit-description">Edit</span>
+              </div>
+
+              <div *ngIf="!description.length > 0" style="font-size: 13px;margin-top: 10px;" class="nick acct-description">
+                You have no description!
+                <span data-toggle="modal" data-target="#edit-user" class="edit-description">Edit</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="user-info-list card">
+          <div class="card">
+            <!--<div class="card-header">Default Tabs</div>-->
+            <div class="tab-container">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#reviews" data-toggle="tab" role="tab">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#votes" data-toggle="tab" role="tab">Votes</a></li>
+                <!--<li class="nav-item"><a class="nav-link" href="#posts" data-toggle="tab" role="tab">Posts</a></li>-->
+                <!--<li class="nav-item"><a class="nav-link" href="#comments" data-toggle="tab" role="tab">Comments</a></li>-->
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="reviews" role="tabpanel">
+                  <div *ngIf="!loading">
+                    <div style="padding-top: 4px; padding-bottom: 4px; " *ngFor="let review of user.reviews" class="row be-booking-promos profile-reviews">
+                      <div (click)="selectReview(review)" data-toggle="modal" data-target="#edit-review" style="padding-top: 0px !important; padding-bottom:0px !important; margin-bottom: -5px; margin-top: 0px;" class="row">
+                        <h4 style="font-weight: bold;">{{review.title}}</h4>
+                        <p style="width: 100%;">{{clipReviewBody(review.body)}} etc...</p>
+                        <div style="width: 100%; position: relative; top: -4px;">
+                          <p style="color: grey;">{{review.time | timeAgo}}</p>
+                        </div>
+                        <!--<span [innerHTML]="review.body" *ngIf="showMoreReviews.includes(review.body)"></span>-->
+                        <!--<span *ngIf="showMoreReviews.includes(review.body)" (click)="hideMore(review.body)" class="review-description-more">(collapse)</span>-->
+                        <hr/>
+                      </div>
+                    </div>
+                    <p *ngIf="!user.reviews.length > 0" style="font-weight: bold;">You haven't written any reviews!</p>
+                  </div>
+
+                </div>
+                <!--<div class="tab-pane" id="posts" role="tabpanel">-->
+                  <!--<h4>Feature coming soon!</h4>-->
+                <!--</div>-->
+                <div class="tab-pane" id="votes" role="tabpanel">
+                  <h5 style="font-weight: bold;">We are currently working on this feature!</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3" style="margin-top: 12px;">
+        <div class="widget widget-fullwidth widget-small">
+          <div class="widget-head pb-6">
+            <!--<div class="tools"><span class="icon mdi mdi-chevron-down"></span><span class="icon mdi mdi-refresh-sync"></span><span class="icon mdi mdi-close"></span></div>-->
+            <div class="title">Credentials & Highlights</div>
+            <hr/>
+            <div style="font-size: 14px;">
+              <span class="mdi mdi-accounts-alt"></span> <span style="margin-left: 3px;">41.6k views</span>
+            </div>
+            <!--<p>Feature coming soon!</p>-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="edit-user" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="card-header">Edit Your Profile
+          <!--<span class="card-subtitle">The write a review feature is only available to NewsFiltr Pro accounts.</span>-->
+        </div>
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="main-content container-fluid" style="margin-top: -60px;padding-bottom: 0px; padding-left: 0px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-border-color">
+                <div class="card-body">
+                  <!--<form>-->
+                    <div class="form-group pt-2">
+                      <label>Full Name</label>
+                      <input [(ngModel)]="displayname" class="form-control" type="text" placeholder="Add a full name here">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px; margin-bottom: 20px;">
+                      <label>Tagline</label>
+                      <input [(ngModel)]="tagline" class="form-control" type="text" placeholder="Add a tagline here">
+                    </div>
+                    <div id="editor2"></div>
+                    <div class="row">
+                      <p style="position: absolute; right: 16px; bottom: -45px;">
+                        <button data-dismiss="modal" (click)="submitEdit()" class="btn btn-space btn-primary" type="submit">Submit</button>
+                        <button data-dismiss="modal" class="btn btn-space btn-secondary">Cancel</button>
+                      </p>
+                    </div>
+                  <!--</form>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="modal-footer"></div>-->
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="edit-review" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="card-header">Edit Your Review<span class="card-subtitle"></span></div>
+        <button class="close" type="button" data-dismiss="modal" aria-hidden="true"><span class="mdi mdi-close"></span></button>
+      </div>
+      <div class="modal-body">
+        <!--<div class="text-center">-->
+        <!--<div class="text-success"><span class="modal-main-icon mdi mdi-check"></span></div>-->
+        <!--<h3>Awesome!</h3>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Fusce ultrices euismod lobortis.</p>-->
+        <!--<div class="mt-8">-->
+        <!--<button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>-->
+        <!--<button class="btn btn-space btn-success" type="button" data-dismiss="modal">Proceed</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <div class="main-content container-fluid" style="margin-top: -60px;padding-bottom: 0px; padding-left: 0px !important;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <p>Forgotten what the article is about? Click <a data-dismiss="modal" routerLink="/article/{{selectedReview.unique}}" style="cursor: pointer; z-index: 10000000; text-decoration: underline;" >here</a> to go to it.</p>
+                  <hr/>
+
+                  <!--<div style="margin-left: 25%; height: 71px; width: 176px;" class="icon">-->
+                  <!--<span style="-->
+                  <!--font-size: 17px;-->
+                  <!--position: relative;-->
+                  <!--top: -7px;-->
+                  <!--margin-right: 3px;-->
+                  <!--" class="title">Article Rating</span>-->
+                  <!--<span style="font-weight: bold; font-size: 42px;" class="mdi">{{overallRating}}</span>-->
+                  <!--</div>-->
+                  <!--<form action="#">-->
+                  <!--<div class="sensationalism-popover"></div>-->
+                  <!--<div (click)="toggleSensationalism()" class="form-group row sensationalism-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs example-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how superficial, sensational, and headline-grabbing the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right sensationalism-label">Sensationalism</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control sensationalism-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="sensationalism-rating">{{sensationalismRating}}/10</h5>-->
+                  <!--</div>-->
+
+
+                  <!--<div class="accuracy-popover-anchor row"></div>-->
+                  <!--<div (click)="toggleAccuracy()"  class="form-group row accuracy-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-accuracy-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how accurate the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right accuracy-label">Accuracy</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control accuracy-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="accuracy-rating">{{accuracyRating}}/10</h5>-->
+                  <!--</div>-->
+
+                  <!--<div class="bias-popover-anchor row"></div>-->
+                  <!--<div (click)="toggleBias()"  class="form-group row bias-wrapper">-->
+                    <!--<button style="visibility: hidden;" class="btn btn-space btn-secondary btn-xs article-bias-rating-popover col-form-label text-sm-right" type="button" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="A rating of how biased the article is...">-->
+                      <!--<label class="col-12 col-sm-3 col-form-label text-sm-right bias-label">Bias</label>-->
+                    <!--</button>-->
+                    <!--<div class="col-12 col-sm-12 col-lg-6 mt-2">-->
+                      <!--<input class="bslider form-control bias-rating" type="text" value="">-->
+                    <!--</div>-->
+                    <!--<h5 class="bias-rating">{{biasRating}}/10</h5>-->
+                  <!--</div>-->
+                  <!--<hr/>-->
+                  <form>
+                    <div class="form-group row mt-2">
+                      <div class="col-9 col-lg-12">
+                        <input [(ngModel)]="selectedReview.title" [ngModelOptions]="{standalone: true}" class="form-control" id="inputEmail2" type="text" placeholder="Review Title">
+                      </div>
+                    </div>
+                  </form>
+
+                  <!--</form>-->
+                  <div id="editor3"></div>
+
+
+
+                </div>
+                <div style="float: right;">
+
+                  <button class="btn btn-space btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                  <button (click)="submitReviewEdit(selectedReview)" class="btn btn-space btn-primary" type="button" data-dismiss="modal">Edit Review</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="modal-footer"></div>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,902 @@
+/*#ea4335*/
+.article-source-name {
+  cursor: pointer;
+  color: #9c9c9d !important;
+  position: relative;
+  top: -2px;
+}
+.article-source-name:hover {
+  color: red !important;
+  cursor: pointer;
+}
+.login-button, .signup-button {
+  cursor: pointer; font-weight: bold;
+}
+.review-author {
+  position: relative;top: -34px;
+  /*font-weight: bold;*/
+}
+.review-author-title {
+  cursor: pointer;
+  /*font-weight: 300;*/
+}
+.review-author-title:hover {
+  color: red;
+}
+.review-description-more {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+}
+.review-description-more:hover {
+  color: #2b6dad; font-family: Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-button:hover, .signup-button:hover {
+  color: red;
+}
+
+.page-aside {
+  left: 0px !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.article-button-row {
+  position: relative; top: -35px;
+}
+.upvote-count {
+  position: absolute;
+  left: 26px;
+  top: -28px;
+  color: black;
+  font-weight: bolder;
+}
+.vote-arrows {
+  color: grey;
+}
+
+.vote-arrows:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.vote-arrows-voted {
+  color: red;
+  cursor: pointer;
+}
+
+.vote-arrows-clicked {
+  color: red;
+  cursor: pointer;
+}
+
+.downvote-arrow {
+  position: absolute;
+  left: 25px;
+  top: -8px;
+  font-size: 27px;
+}
+
+.upvote-arrow {
+  position: absolute;
+  left: 25px;
+  bottom: 49px;
+  font-size: 27px;
+}
+
+.article-image {
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.article-content-text-wrapper {
+  display: inline-block;
+  padding: 10px;
+}
+
+.article-title {
+  font-weight: bold;
+}
+
+.article-description {
+  /*will add some sort of wrap around in the small so that it gets clipped or something to that effect*/
+}
+.article-to-be-continued {
+  right: -3px !important;;
+  bottom: -6px !important;;
+  position: absolute !important;;
+  font-size: 18px !important;;
+  font-weight: bolder !important;
+}
+
+.vote-buttons-wrapper-dont-show-more {
+  top: 111px;
+  left: -76px;
+  position: absolute;
+}
+
+.vote-buttons-wrapper-show-more {
+  top: 111px;
+  left: -76px;
+  position: absolute;
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 401px) {
+
+  .article-content-text-wrapper {
+    position: relative;
+    left: 50px;
+    width: 77%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*overflow : hidden;*/
+    /*position: relative;*/
+    /*max-height: 36px;*/
+    /*display: none;*/
+    /*text-overflow: ellipsis;*/
+  }
+  .article-title {
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+    margin-bottom: 20px;
+    height: 70px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 81px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -46px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 64px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 380px;
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: -7px*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -7px;*/
+  /*}*/
+  .article-image {
+    display: none;
+  }
+  /*.article-card {*/
+    /*height: 146px;*/
+  /*}*/
+}
+
+
+@media screen and (min-width: 402px) and (max-width: 443px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 70px;
+    width: 77%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*overflow : hidden;*/
+    /*position: relative;*/
+    /*max-height: 36px;*/
+    /*display: none;*/
+    /*text-overflow: ellipsis;*/
+  }
+  .article-title {
+    font-size: 15px;
+    height: 70px;
+    position: relative;
+    top: -10px;
+    margin-bottom: 10px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 81px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -46px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 64px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 480px;
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: -7px*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -7px;*/
+  /*}*/
+  .article-image {
+    display: none;
+  }
+
+  /*.article-card {*/
+    /*height: 146px;*/
+  /*}*/
+}
+
+@media screen and (min-width: 444px) and (max-width: 575px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 60px;
+    width: 65%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*overflow : hidden;*/
+    /*position: relative;*/
+    /*max-height: 29px;*/
+    /*display: none;*/
+  }
+  .article-title {
+    font-size: 18px;
+    position: relative;
+    height:75px;
+    top: -25px;
+    margin-bottom: 10px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: 77px;
+    font-size: 27px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: -42px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 90px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .article-button-row {
+    width: 480px;
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: -7px*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -7px;*/
+  /*}*/
+  .article-image {
+    /*display: none;*/
+  }
+
+  .article-card {
+    /*height: 138px;*/
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    top: 2px;
+    width: 65%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*text-overflow: ellipsis !important;*/
+    /*white-space: nowrap !important;*/
+    /*overflow: hidden !important;*/
+    /*position: relative;*/
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 40px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 55px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -17px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -35px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+  .article-button-row {
+    margin-top:25px;
+    width: 480px;
+  }
+  .vote-buttons-wrapper-dont-show-more {
+    left: -54px;
+  }
+  .vote-buttons-wrapper-show-more {
+    left: -54px;
+  }
+  /*.article-card {*/
+    /*height: 115px;*/
+  /*}*/
+}
+
+.title-and-reviews-wrapper {
+  padding-left: 280px;
+}
+
+/*.page-aside {*/
+  /*overflow: scroll;*/
+  /*top: 159px;*/
+  /*bottom: 0;*/
+  /*position: absolute;*/
+  /*overflow-y: scroll;*/
+  /*overflow-x: hidden;*/
+  /*height: 100vh;*/
+/*}*/
+
+/*.be-booking-promos {*/
+  /*padding-left: 308px;*/
+/*}*/
+
+/*.be-aside-header {*/
+  /*padding-top: 20px;*/
+  /*padding-bottom: 16px;*/
+/*}*/
+
+@media screen and (max-width: 767px) {
+  .title-and-reviews-wrapper {
+    padding-left: 0px;
+  }
+
+  /*.title-and-reviews-wrapper {*/
+    /*padding-left: 0px;*/
+  /*}*/
+  /*.page-aside {*/
+    /*position: static;*/
+    /*top: inherit;*/
+    /*height: 100%;*/
+  /*}*/
+
+
+  /*.be-booking-promos {*/
+    /*padding-left: inherit;*/
+  /*}*/
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 863px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 60%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*overflow : hidden;*/
+    /*position: relative;*/
+    /*height: 34px;*/
+    /*display: none;*/
+  }
+  .article-title {
+    height: 75px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -33px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -50px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 18px;
+    /*right: 20px;*/
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: -82px*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -670px;*/
+  /*}*/
+  /*.article-card {*/
+    /*height: 132px;*/
+  /*}*/
+}
+@media screen and (min-width: 864px) and (max-width: 991px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 64%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*overflow : hidden;*/
+    /*position: relative;*/
+    /*height: 34px;*/
+    /*display: none;*/
+  }
+  .article-title {
+    height: 75px;
+  }
+
+  .upvote-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 70px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 20px;
+    top: -33px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 20px;
+    top: -50px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 18px;
+    /*right: 20px;*/
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: -82px*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -449px;*/
+  /*}*/
+  /*.article-card {*/
+    /*height: 132px;*/
+  /*}*/
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .article-content-text-wrapper {
+    position: relative;
+    left: 14px;
+    width: 70%;
+  }
+  .article-description {
+    /*display: none;*/
+    /*text-overflow: ellipsis !important;*/
+    /*white-space: nowrap !important;*/
+    /*overflow: hidden !important;*/
+    position: relative;
+    top: -30px;
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 45px;
+  }
+  .upvote-arrow {
+    position: absolute;
+    left: 30px;
+    bottom: 77px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 30px;
+    top: -43px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 30px;
+    top: -59px;
+    color: black;
+    font-weight: bolder;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 24px;
+    /*right: 20px;*/
+  }
+  .article-button-row {
+    margin-top:17px;
+    /*width: 480px;*/
+  }
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: 2px;*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -319px;*/
+  /*}*/
+  /*.article-card {*/
+    /*height: 132px;*/
+  /*}*/
+}
+@media screen and (min-width: 1200px) {
+  .article-content-text-wrapper {
+    position: relative;
+    top: 8px;
+  }
+  .article-description {
+    /*display: none;*/
+    /*text-overflow: ellipsis !important;*/
+    /*white-space: nowrap !important;*/
+    /*overflow: hidden !important;*/
+    position: relative;
+    top: -26px;
+    /*max-height: 35px;*/
+  }
+  .article-title {
+    height: 45px;
+    top: -6px;
+    position: relative;
+  }
+  .upvote-arrow {
+    position: absolute;
+    left: 35px;
+    bottom: 75px;
+    font-size: 27px;
+  }
+  .downvote-arrow {
+    position: absolute;
+    left: 35px;
+    top: -41px;
+    font-size: 27px;
+  }
+  .upvote-count {
+    position: absolute;
+    left: 35px;
+    top: -57px;
+    color: black;
+    font-weight: bolder;
+  }
+
+  /*.vote-buttons-wrapper-dont-show-more {*/
+    /*top: 18px;*/
+  /*}*/
+  /*.vote-buttons-wrapper-show-more {*/
+    /*top: -252px;*/
+  /*}*/
+
+
+  .article-button-row {
+    margin-top:4px;
+    width: 480px;
+  }
+  .article-image {
+    /*width: 120px;*/
+    height: 95px;
+    /*position: absolute;*/
+    top: 20px;
+    /*right: 20px;*/
+  }
+  .article-card {
+    /*height: 132px;*/
+  }
+}
+
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.article-title-a {
+  cursor: pointer !important;
+}
+.article-title-a:hover {
+  color: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.review-body {
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  width: 50%;
+}
+
+.sensationalism-popover {
+  position: relative; right: -10px; top: -30px;
+}
+.accuracy-popover-anchor {
+  position: relative; top: -90px; left: -1px;
+}
+.bias-popover-anchor {
+  position: relative; top: -153px;left: -17px;
+}
+
+
+.sensationalism-button {};
+.article-accuracy-rating-popover {};
+.article-bias-rating-popover {};
+
+.sensationalism-wrapper {}
+.accuracy-wrapper {
+  position: relative; left: 35px;
+}
+.bias-wrapper {
+  position: relative; left: 61px; margin-bottom: 20px;
+}
+
+.sensationalism-label {
+  position: relative;cursor: pointer;left: -61px;visibility: visible;font-size: 13px;
+}
+.accuracy-label {
+  position: relative;cursor: pointer;left: -61px;visibility: visible;font-size: 13px;
+}
+.bias-label {
+  position: relative;cursor: pointer;left: -58px;visibility: visible;font-size: 13px;
+}
+
+.sensationalism-rating {
+  position: relative;
+}
+.accuracy-rating {
+  position: relative;
+}
+.bias-rating {
+  position: relative;
+}
+
+
+/*@media (min-width: 576px)*/
+/*@media (min-width: 768px)*/
+/*@media (min-width: 992px)*/
+/*@media (min-width: 1200px) */
+@media screen and (max-width: 576px) {
+  .sensationalism-label {
+    left: -8px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -8px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -8px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+.show-if-width-mobile {
+  visibility: hidden;
+}
+@media screen and (max-width: 768px) {
+  .show-if-width-mobile {
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .sensationalism-label {
+    left: -97px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -62px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -34px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .sensationalism-label {
+    left: -97px;
+  }
+  .sensationalism-rating {
+    left: 12px;
+  }
+  .accuracy-wrapper {
+    left: 2px;
+  }
+  .accuracy-label {
+    left: -62px;
+  }
+  .accuracy-rating {
+    left: 12px;
+  }
+  .bias-wrapper {
+    left: 2px;
+  }
+  .bias-label {
+    left: -34px;
+  }
+  .bias-rating {
+    left: 12px;
+  }
+}
+
+.polar-chart-wrapper {
+  top: -50px;
+}
+
+.show-voting {
+  display: none;
+}
+
+@media screen and (max-width: 995px) {
+  .be-side-article-image {
+    margin-bottom: 20px;
+  }
+
+  .show-voting {
+    display: inline !important;
+  }
+
+  .polar-chart-wrapper {
+    top: -10px;
+  }
+
+  .be-side-article-image-b {
+    display: none;
+  }
+  .view-article-header-vote-buttons {
+    display: none !important;
+  }
+}
+
+
+
+@media screen and (min-width: 996px) {
+  .be-side-article-image {
+    display: none;
+  }
+
+  .be-side-article-image-b {
+    display: inherit;
+    height: 160px;
+    /*width: 160px;*/
+    /*margin-right: 35px;*/
+    margin-top: 5px;
+    position: relative;
+    /*right: 70px;*/
+    /*padding-left: 25px;*/
+  }
+}
+
+
+

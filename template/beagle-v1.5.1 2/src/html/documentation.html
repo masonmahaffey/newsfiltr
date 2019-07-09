@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/img/logo-fav.png">
+    <title>Beagle</title>
+    <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jqvmap/jqvmap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.gritter/css/jquery.gritter.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/select2/css/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.fullcalendar/fullcalendar.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/lib/jquery.magnific-popup/magnific-popup.css"/>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="be-wrapper be-aside be-fixed-sidebar">
+      <nav class="navbar navbar-expand fixed-top be-top-header">
+        <div class="container-fluid">
+          <div class="be-navbar-header"><a class="navbar-brand" href="index.html"></a>
+          </div>
+          <div class="be-right-navbar">
+            <ul class="nav navbar-nav float-right be-user-nav">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
+                <div class="dropdown-menu" role="menu">     
+                  <div class="user-info">
+                    <div class="user-name">Túpac Amaru</div>
+                    <div class="user-position online">Available</div>
+                  </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="pages-login.html"><span class="icon mdi mdi-power"></span>Logout</a>
+                </div>
+              </li>
+            </ul>
+            <div class="page-title"><span>Documentation</span></div>
+            <ul class="nav navbar-nav float-right be-icons-nav">
+              <li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"></span></a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
+                <ul class="dropdown-menu be-notifications">
+                  <li>
+                    <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                    <div class="list">
+                      <div class="be-scroller">
+                        <div class="content">
+                          <ul>
+                            <li class="notification notification-unread"><a href="#">
+                                <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
+                                <div class="notification-info">
+                                  <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
+                                </div></a></li>
+                            <li class="notification"><a href="#">
+                                <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
+                                <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer"> <a href="#">View all notifications</a></div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-apps"></span></a>
+                <ul class="dropdown-menu be-connections">
+                  <li>
+                    <div class="list">
+                      <div class="content">
+                        <div class="row">
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/github.png" alt="Github"><span>GitHub</span></a></div>
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/bitbucket.png" alt="Bitbucket"><span>Bitbucket</span></a></div>
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/slack.png" alt="Slack"><span>Slack</span></a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/dribbble.png" alt="Dribbble"><span>Dribbble</span></a></div>
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/mail_chimp.png" alt="Mail Chimp"><span>Mail Chimp</span></a></div>
+                          <div class="col"><a class="connection-item" href="#"><img src="assets/img/dropbox.png" alt="Dropbox"><span>Dropbox</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footer"> <a href="#">More</a></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="be-left-sidebar">
+        <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" href="#">Documentation</a>
+          <div class="left-sidebar-spacer">
+            <div class="left-sidebar-scroll">
+              <div class="left-sidebar-content">
+                <ul class="sidebar-elements">
+                  <li class="divider">Menu</li>
+                  <li><a href="index.html"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span>UI Elements</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="ui-alerts.html">Alerts</a>
+                      </li>
+                      <li><a href="ui-buttons.html">Buttons</a>
+                      </li>
+                      <li><a href="ui-cards.html"><span class="badge badge-primary float-right">New</span>Cards</a>
+                      </li>
+                      <li><a href="ui-panels.html">Panels</a>
+                      </li>
+                      <li><a href="ui-general.html">General</a>
+                      </li>
+                      <li><a href="ui-modals.html">Modals</a>
+                      </li>
+                      <li><a href="ui-notifications.html">Notifications</a>
+                      </li>
+                      <li><a href="ui-icons.html">Icons</a>
+                      </li>
+                      <li><a href="ui-grid.html">Grid</a>
+                      </li>
+                      <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
+                      </li>
+                      <li><a href="ui-nestable-lists.html">Nestable Lists</a>
+                      </li>
+                      <li><a href="ui-typography.html">Typography</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="charts.html"><i class="icon mdi mdi-chart-donut"></i><span>Charts</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="charts-flot.html">Flot</a>
+                      </li>
+                      <li><a href="charts-sparkline.html">Sparklines</a>
+                      </li>
+                      <li><a href="charts-chartjs.html">Chart.js</a>
+                      </li>
+                      <li><a href="charts-morris.html">Morris.js</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-dot-circle"></i><span>Forms</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="form-elements.html">Elements</a>
+                      </li>
+                      <li><a href="form-validation.html">Validation</a>
+                      </li>
+                      <li><a href="form-multiselect.html">Multiselect</a>
+                      </li>
+                      <li><a href="form-wizard.html">Wizard</a>
+                      </li>
+                      <li><a href="form-masks.html">Input Masks</a>
+                      </li>
+                      <li><a href="form-wysiwyg.html">WYSIWYG Editor</a>
+                      </li>
+                      <li><a href="form-upload.html">Multi Upload</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-border-all"></i><span>Tables</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="tables-general.html">General</a>
+                      </li>
+                      <li><a href="tables-datatables.html">Data Tables</a>
+                      </li>
+                      <li><a href="tables-filters.html"><span class="badge badge-primary float-right">New</span>Table Filters</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span>Pages</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="pages-blank.html">Blank Page</a>
+                      </li>
+                      <li><a href="pages-blank-header.html">Blank Page Header</a>
+                      </li>
+                      <li><a href="pages-login.html">Login</a>
+                      </li>
+                      <li><a href="pages-login2.html">Login v2</a>
+                      </li>
+                      <li><a href="pages-404.html">404 Page</a>
+                      </li>
+                      <li><a href="pages-sign-up.html">Sign Up</a>
+                      </li>
+                      <li><a href="pages-forgot-password.html">Forgot Password</a>
+                      </li>
+                      <li><a href="pages-profile.html">Profile</a>
+                      </li>
+                      <li><a href="pages-pricing-tables.html">Pricing Tables</a>
+                      </li>
+                      <li><a href="pages-pricing-tables2.html">Pricing Tables v2</a>
+                      </li>
+                      <li><a href="pages-timeline.html">Timeline</a>
+                      </li>
+                      <li><a href="pages-timeline2.html">Timeline v2</a>
+                      </li>
+                      <li><a href="pages-invoice.html"><span class="badge badge-primary float-right">New</span>Invoice</a>
+                      </li>
+                      <li><a href="pages-calendar.html">Calendar</a>
+                      </li>
+                      <li><a href="pages-gallery.html">Gallery</a>
+                      </li>
+                      <li><a href="pages-code-editor.html"><span class="badge badge-primary float-right">New    </span>Code Editor</a>
+                      </li>
+                      <li><a href="pages-booking.html"><span class="badge badge-primary float-right">New</span>Booking</a>
+                      </li>
+                      <li><a href="pages-loaders.html"><span class="badge badge-primary float-right">New</span>Loaders</a>
+                      </li>
+                      <li><a href="pages-ajax-loader.html"><span class="badge badge-primary float-right">New</span>AJAX Loader</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="divider">Features</li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-inbox"></i><span>Email</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="email-inbox.html">Inbox</a>
+                      </li>
+                      <li><a href="email-read.html">Email Detail</a>
+                      </li>
+                      <li><a href="email-compose.html">Email Compose</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-view-web"></i><span>Layouts</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="layouts-primary-header.html">Primary Header</a>
+                      </li>
+                      <li><a href="layouts-success-header.html">Success Header</a>
+                      </li>
+                      <li><a href="layouts-warning-header.html">Warning Header</a>
+                      </li>
+                      <li><a href="layouts-danger-header.html">Danger Header</a>
+                      </li>
+                      <li><a href="layouts-search-input.html">Search Input</a>
+                      </li>
+                      <li><a href="layouts-offcanvas-menu.html">Off Canvas Menu</a>
+                      </li>
+                      <li><a href="layouts-nosidebar-left.html">Without Left Sidebar</a>
+                      </li>
+                      <li><a href="layouts-nosidebar-right.html">Without Right Sidebar</a>
+                      </li>
+                      <li><a href="layouts-nosidebars.html">Without Both Sidebars</a>
+                      </li>
+                      <li><a href="layouts-fixed-sidebar.html">Fixed Left Sidebar</a>
+                      </li>
+                      <li><a href="layouts-boxed-layout.html"><span class="badge badge-primary float-right">New</span>Boxed Layout</a>
+                      </li>
+                      <li><a href="pages-blank-aside.html">Page Aside</a>
+                      </li>
+                      <li><a href="layouts-collapsible-sidebar.html">Collapsible Sidebar</a>
+                      </li>
+                      <li><a href="layouts-sub-navigation.html"><span class="badge badge-primary float-right">New</span>Sub Navigation</a>
+                      </li>
+                      <li><a href="layouts-mega-menu.html"><span class="badge badge-primary float-right">New</span>Mega Menu</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-pin"></i><span>Maps</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="maps-google.html">Google Maps</a>
+                      </li>
+                      <li><a href="maps-vector.html">Vector Maps</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-folder"></i><span>Menu Levels</span></a>
+                    <ul class="sub-menu">
+                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                          </li>
+                          <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                            <ul class="sub-menu">
+                              <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                              </li>
+                              <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                          </li>
+                          <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                            <ul class="sub-menu">
+                              <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                              </li>
+                              <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active"><a href="documentation.html"><i class="icon mdi mdi-book"></i><span>Documentation</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="progress-widget">
+            <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-primary" style="width: 60%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="be-content docs">
+        <aside class="page-aside">
+          <div class="be-scroller-aside">
+            <div class="aside-content">
+              <div class="content">
+                <div class="aside-header">
+                  <button class="navbar-toggle" data-target="#aside-spy" data-toggle="collapse" type="button"><span class="icon mdi mdi-caret-down"></span></button><span class="title">Documentation</span>
+                  <p class="description">Beagle docs</p>
+                </div>
+              </div>
+              <div class="navbar aside-nav collapse" id="aside-spy">
+                <ul class="navbar nav">
+                  <li class="nav-item"><a class="nav-link" href="#general">General</a>
+                    <ul class="nav sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="#general_introduction">Introduction</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#general_structure">HTML Structure</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#general_javascript">JavaScript</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#getting_started">Getting Started</a>
+                    <ul class="nav sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="#gs_basic_setup">Basic Setup</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#gs_npm_setup">Using npm</a></li>
+                      <li class="nav-item"><a class="nav-link" href="##gs_npm_install_dependencies">Install dependencies</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#gs_npm_setup_sass">Setup Sass</a></li>
+                      <li class="nav-item"><a class="nav-link" href="gs_sass_variables">Variables</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#gs_npm_tasks">NPM scripts</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#gs_npm_add_new_dependencies">Add new dependencies</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#plugins">Plugins</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="main-content container-fluid">
+          <section id="general">
+            <h1 id="general_introduction">Introduction</h1>
+            <p>Thank you for support our work, <b>Beagle</b> is an HTML/CSS/JS admin template based on the famous Bootstrap framework, made it with love in every pixel.</p>
+            <p>In this document you will find a complete guide which covers topics about the product functionality, components, structure, workflow and the initial setup. </p>
+            <h2 id="introduction">Folder Structure</h2>
+            <p>Once you've downloaded this product, extract the zip file and you will find these directories:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>beagle.zip</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">beagle
+├── dist
+├──── html
+├──── starter
+├── src
+├── dep-copy.json
+├── package.json
+└── README.md
+</pre>
+              </div>
+            </div>
+            <h3>dist</h3>
+            <p>This folder contains the final production-ready compiled files</p>
+            <h4>html</h4>
+            <p>This folder contains the complete distribution version with all demo content included as seen in the live preview version.</p>
+            <h4>starter</h4>
+            <p>This folder contains the essentials components, this version does not include any of the live preview examples. This is especially designed to get started with only the needed elements. </p>
+            <h3>src</h3>
+            <p>In this folder you'll find the template's source code, if you want to customize the template to fit your specific needs, this is the right place to start with.</p>
+            <h3>dep-copy.json</h3>
+            <p>In this file you'll find the libraries that are copied from <code>"node_modules"</code> to <code>"src/assets/lib"</code>. If you want add a new libraries, this file is necessary.</p>
+            <h3>package.json</h3>
+            <p>This is the <a href="https://docs.npmjs.com/getting-started/using-a-package.json">npm manifest</a> file in which we define what are going to be our workflow dependencies and our main tasks.</p>
+            <h1 id="general_structure">HTML Structure</h1>
+            <p>The template main structure is divided in four sections: <b>Top bar</b>, <b>Left sidebar</b>, <b>Right sidebar</b> and <b>Main content</b>.</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Main Structure</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;be-wrapper&quot;&gt;
+      &lt;nav class=&quot;navbar navbar-expand fixed-top be-top-header&quot;&gt;
+        &lt;!-- Top bar --&gt;
+      &lt;/nav&gt;
+      &lt;div class=&quot;be-left-sidebar&quot;&gt;
+        &lt;!-- Left sidebar --&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;be-content&quot;&gt;
+        &lt;!-- Main Content --&gt;
+      &lt;/div&gt;
+      &lt;nav class=&quot;be-right-sidebar&quot;&gt;
+        &lt;!-- Right sidebar --&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+              </div>
+            </div>
+            <h3 id="required_dependencies">Required Dependencies</h3>
+            <p>This template require four libraries to work:</p>
+            <ul>
+              <li><a href="https://jquery.com/">jQuery 1.9.1</a> (or later)</li>
+              <li><a href="http://getbootstrap.com/">Bootstrap 4.1.2</a></li>
+              <li><a href="https://github.com/noraesae/perfect-scrollbar">Perfect Scrollbar 1.4.0</a></li>
+              <li><a href="http://zavoloklom.github.io/material-design-iconic-font/index.html">Material Design Iconic Font</a> (latest)</li>
+            </ul>
+            <p>In addition to these libs, the main structure needs a basic modular js core to provide the template interaction like sidebars functionality. This file is located in <code>"assets/js/app.js"</code></p>
+            <p>There are some dependencies embedded in the <code>app.js</code> file that adds extra functionality to the template:</p>
+            <ul>
+              <li><a href="https://github.com/ftlabs/fastclick">Fast Click 1.0.3</a></li>
+              <li><a href="https://github.com/bgrins/TinyColor">Tiny Color 1.2.1</a></li>
+              <li><a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">jQuery Touch Swipe 1.6.12</a></li>
+              <li><a href="https://github.com/foxythemes/bs4-breakpoint-check">jQuery Bootstrap 4 Breakpoint Check 1.0.5</a></li>
+            </ul>
+            <div class="card card-full-primary">
+              <div class="card-header"><b>Note:</b></div>
+              <div class="card-body">
+                <p>You don't need to add these last dependencies because they are already included in the app.js file </p>
+              </div>
+            </div>
+            <h3>Include the dependencies</h3>
+            <p>Be sure to include the essentials scripts in your pages, for example inside your <code>head</code> tag should be like this:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Head Links</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/lib/material-design-icons/css/material-design-iconic-font.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/lib/perfect-scrollbar/css/perfect-scrollbar.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/app.css&quot; type=&quot;text/css&quot;&gt;
+</pre>
+              </div>
+            </div>
+            <p>And just before the <code>body</code> tag ends, please add these JavaScript libs:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Footer Scripts</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&lt;script src=&quot;assets/lib/jquery/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;				
+&lt;script src=&quot;assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/app.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function(){
+    //initialize the javascript
+    App.init();
+  });
+&lt;/script&gt;
+</pre>
+              </div>
+            </div>
+            <h2>Top bar</h2>
+            <p>We are extending the <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap Navbar</a> component using the fixed version by default, we also added some custom elements:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Top bar structure</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&lt;nav class=&quot;navbar navbar-expand fixed-top be-top-header&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+
+    &lt;!-- Navbar Header --&gt;
+    &lt;div class=&quot;be-navbar-header&quot;&gt;
+
+      &lt;!-- Brand Logo --&gt;
+      &lt;a href=&quot;&#35;&quot; class=&quot;navbar-brand&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Main topbar elements --&gt;
+    &lt;div class=&quot;be-right-navbar&quot;&gt;
+      &lt;ul class=&quot;nav navbar-nav be-user-nav&quot;&gt;
+        &lt;!-- User Menu --&gt;
+      &lt;/ul&gt;
+
+      &lt;!-- Page title --&gt;
+      &lt;div class=&quot;page-title&quot;&gt;&lt;span&gt;Dashboard&lt;/span&gt;&lt;/div&gt;
+
+      &lt;ul class=&quot;nav navbar-nav be-icons-nav&quot;&gt;
+        &lt;!-- Icons Menu --&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Left navbar (Used only when there is no left sidebar) --&gt;
+    &lt;a href=&quot;&#35;&quot; data-toggle=&quot;collapse&quot; data-target=&quot;&#35;be-navbar-collapse&quot; class=&quot;be-toggle-top-header-menu collapsed&quot;&gt;No Sidebar Left&lt;/a&gt;
+    &lt;div id=&quot;be-navbar-collapse&quot; class=&quot;navbar-collapse collapse&quot;&gt;
+      &lt;!-- Default bootstrap navbar --&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+</pre>
+              </div>
+            </div>
+            <h3>Navbar Header</h3>
+            <p>In this element you'll find the app logo, located in the top left corner (<code>"navbar-brand"</code>), it will be shown on large devices and hidden on small resolutions:<br><img class="img-fluid" src="assets/img/docs/img1.png" alt="Page Title"></p>
+            <h3>Main topbar elements</h3>
+            <p>Is composed by a group of elements which one of them is going to be hidden(<code>"page-title"</code>) on small devices.<br></p>
+            <p>Desktop View<br><img class="img-fluid" src="assets/img/docs/img2.png" alt="Navbar Collapse"></p>
+            <p>Small View<br><img class="img-fluid" src="assets/img/docs/img3.png" alt="Navbar Collapse"></p>
+            <h1 id="general_javascript">JavaScript</h1>
+            <p>In every page, we are calling an object method which handles the basic template interaction. It's written with "The Module Pattern" which encapsulates certain code, allowing to be used when it's needed.</p>
+            <p>We use a global javascript object called "App", it provides a modular structure that we use to initialize the demo Js plugins on each demo page. You can find several modules in <code>"assets/js"</code> inside the <b>html</b> folder. </p>
+            <p>Said that you'll notice that there are different Js modules for some of the demo pages, all of them are optional, exept the <code>"app.js"</code> or <code>"app.min.js"</code> in case you want to use the minified version.</p>
+            <div class="card card-full-primary">
+              <div class="card-header"><b>Important</b></div>
+              <div class="card-body">
+                <p>Please don't add any custom Js code inside this file because you'll lose it when you update the template.</p>
+              </div>
+            </div>
+            <h3 id="init_method">init() Method</h3>
+            <p>This method is responsible for some of the bootstrap plugins initializing, both sidebars functionality and other responsive tasks. That's why this is the core method of this template.</p>
+            <p>You can add it at the end of the page like this:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Footer Scripts</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function(){
+    App.init();
+  });
+&lt;/script&gt;
+</pre>
+              </div>
+            </div>
+            <h3>Demo modules & methods</h3>
+            <p>In order to call the following methods you'll need to include the script reference of the JavaScript file, after that you can call it after the init method this way: <code>App.methodName();</code></p>
+            <p>Each of these modules contain the JS init for the demo plugins, feel free to copy and modify according to your needs.</p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th width="20%">File Name</th>
+                  <th width="20%">Method</th>
+                  <th width="20%">Page</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>app-dashboard.js</td>
+                  <td>dashboard</td>
+                  <td>index.html</td>
+                </tr>
+                <tr>
+                  <td>app-ui-notifications.js</td>
+                  <td>uiNotifications</td>
+                  <td>ui-notifications.html</td>
+                </tr>
+                <tr>
+                  <td>app-ui-nestable-lists.js</td>
+                  <td>uiNestableLists</td>
+                  <td>ui-nestable-lists.html</td>
+                </tr>
+                <tr>
+                  <td>app-charts.js</td>
+                  <td>charts</td>
+                  <td>charts.html</td>
+                </tr>
+                <tr>
+                  <td>app-charts-morris.js</td>
+                  <td>chartsMorris</td>
+                  <td>charts-morris.html</td>
+                </tr>
+                <tr>
+                  <td>app-charts-sparkline.js</td>
+                  <td>chartsSparklines</td>
+                  <td>charts-sparkline.html</td>
+                </tr>
+                <tr>
+                  <td>app-form-elements.js</td>
+                  <td>formElements</td>
+                  <td>form-elements.html</td>
+                </tr>
+                <tr>
+                  <td>app-form-wizard.js</td>
+                  <td>wizard</td>
+                  <td>form-wizard.html</td>
+                </tr>
+                <tr>
+                  <td>app-form-masks.js</td>
+                  <td>masks</td>
+                  <td>form-masks.html</td>
+                </tr>
+                <tr>
+                  <td>app-form-wysiwyg.js</td>
+                  <td>textEditors</td>
+                  <td>form-wysiwyg.html</td>
+                </tr>
+                <tr>
+                  <td>app-icons.js</td>
+                  <td>IconsFilter</td>
+                  <td>ui-icons.html</td>
+                </tr>
+                <tr>
+                  <td>app-mail-inbox.js</td>
+                  <td>mailInbox</td>
+                  <td>email-inbox.html</td>
+                </tr>
+                <tr>
+                  <td>app-mail-compose.js</td>
+                  <td>mailCompose</td>
+                  <td>email-compose.html</td>
+                </tr>
+                <tr>
+                  <td>app-tables-datatables.js</td>
+                  <td>dataTables</td>
+                  <td>tables-datatables.html</td>
+                </tr>
+                <tr>
+                  <td>app-pages-profile.js</td>
+                  <td>pageProfile</td>
+                  <td>pages-profile.html</td>
+                </tr>
+                <tr>
+                  <td>app-pages-calendar.js</td>
+                  <td>pageCalendar</td>
+                  <td>pages-calendar.html</td>
+                </tr>
+                <tr>
+                  <td>app-pages-gallery.js</td>
+                  <td>pageGallery</td>
+                  <td>pages-gallery.html</td>
+                </tr>
+                <tr>
+                  <td>app-maps-google.js</td>
+                  <td>mapsGoogle</td>
+                  <td>maps-google.html</td>
+                </tr>
+                <tr>
+                  <td>app-maps-vector.js</td>
+                  <td>mapsVector</td>
+                  <td>maps-vector.html</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>Create an App module</h3>
+            <p>You can extend the App modular structure easily by creating your own modules like this:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>Footer Scripts</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">var App = (function () {
+
+  App.moduleName = function( ){
+    'use strict'
+
+    //Js Code
+    
+  };
+
+  return App;
+})(App || {});</pre>
+              </div>
+            </div>
+          </section>
+          <section id="getting_started">
+            <h1>Getting Started</h1>
+            <p>There are three different ways to use this template in your next project:</p>
+            <ul>
+              <li>Basic Setup</li>
+              <li>Using SASS files</li>
+              <li>Using NPM scripts</li>
+            </ul>
+            <h2 id="gs_basic_setup">Basic Setup</h2>
+            <p>This is the quickest way to setup the template, you just have to copy the <b>"starter"</b> folder content into your project root folder and start working on the <code>index.html</code> file.</p>
+            <div class="card card-full-danger">
+              <div class="card-header"><b>Important</b></div>
+              <div class="card-body">
+                <p> Using this method you'll need to add your custom styles in a different css file, to avoid losing changes when you update the template.</p>
+              </div>
+            </div>
+            <p>Be sure to include the <a href="#required_dependencies">essentials scripts</a> in your document to get things work properly. After that you're ready to start building.</p>
+            <h3>Cons</h3>
+            <p>This method is perfect if you think you are not going to make several changes to the original version and use it "as is", otherwise we suggest to use one of the following methods.</p>
+            <h2 id="gs_npm_setup">NPM scripts</h2>
+            <p>The NPM scripts are a property of the package.json file, which allows us to define commands that will be executed several times in our workflow. We can create  commands to execute tasks or operations like install, compile, minify, remove, distribute, etc., all without having to depend of a task runner.</p>
+            <p>If you haven't used NPM scrips before, be sure to check out the <a href="https://docs.npmjs.com/misc/scripts">npm-scripts</a> documentation.</p>
+            <p>Supposing that you already are familiar with NPM scrips, we are going to explain step by step how to get started with the built-in workflow.</p>
+            <h3>Install Node</h3>
+            <p>If you already have Node.js installed you can skip this step.</p>
+            <ol class="xs-mt-20">
+              <li class="xs-mb-15">Be sure to have the latest version of <a href="https://nodejs.org">Node.js</a> installed & running in your computer. We are going to use <a href="https://www.npmjs.com/">npm</a> that comes with Node.js installation.</li>
+            </ol>
+            <h3 id="gs_npm_install_dependencies">Install npm dependencies</h3>
+            <p>In your root folder enter the following command to install the project dependencies: <code>npm install</code>, this command will install all the template libraries inside the source folder: <code>src/assets/libs</code>, you need to run this command before you run <code>npm run dist</code> in order to include dependencies in distribution.</p>
+            <h3 id="gs_npm_setup_sass">Setup SASS development environment</h3>
+            <p>In case you don't know nothing about css pre-processors, this is a brief description about what it is:</p>
+            <blockquote>
+              <p>SASS is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+              <footer>Taken from <a href="http://sass-lang.com/">sass-lang.com</a></footer>
+            </blockquote>
+            <p>In other words with css-preprocessors you can change the full color theme of this template by just changing a few lines of code.</p>
+            <h3>Setting up your css file</h3>
+            <ol class="xs-mt-20">
+              <li class="xs-mb-15">In the sass folder <code>src/sass/</code> you'll find a file called <code>app.scss</code>.</li>
+              <li class="xs-mb-15">Rename it to a different name, for example <code>app.scss</code> => <code>beagle.scss</code>.</li>
+              <li class="xs-mb-15">Then create a new file called <code>app.scss</code> which you are going to use it to modify variables and create your custom code.</li>
+              <li class="xs-mb-15">
+                <p>After that, you'll need to include the original main SASS file into the new file like this:</p>
+                <div class="code-panel">
+                  <div class="code-panel__heading"><span>app.scss</span></div>
+                  <div class="code-panel__content">
+                    <pre class="prettyprint lang-css">// Overwrite templates variables here
+
+// Import the template source code
+@import &quot;beagle&quot;;
+
+// Your custom code goes here
+</pre>
+                  </div>
+                </div>
+                <p>Inside this file you can modify the bootstrap and template variables values for example to change the color scheme:</p>
+                <div class="code-panel">
+                  <div class="code-panel__heading"><span>app.scss</span></div>
+                  <div class="code-panel__content">
+                    <pre class="prettyprint lang-css">// Modify template colors
+$primary:		&#35;595BD4;
+$danger:		&#35;FD3D39;
+$warning:		&#35;FFCB2F;
+$success:		&#35;53D86A;
+
+// Import the template source code
+@import &quot;beagle&quot;;
+</pre>
+                  </div>
+                </div>
+              </li>
+            </ol>
+            <h3 id="gs_sass_variables">Variables</h3>
+            <p>The template comes with several veriables that you can use to customize and create your own version, alongside with the Bootstrap default variables.</p>
+            <p>To see what variables are available go to  <code>"src/sass/config/_beagle-variables.scss"</code>.</p>
+            <h3 id="gs_npm_tasks">Available Commands</h3>
+            <p>After install dependencies now you can run the automated scripts:</p>
+            <h4>NPM Scripts</h4>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th width="20%">Command</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>npm install</td>
+                  <td>Install and copy all the template libraries into <code>src/assets/lib</code> using the <br> <b>dep-copy.json</b> file.</td>
+                </tr>
+                <tr>
+                  <td>npm start</td>
+                  <td>It runs the watch command and an express development server in <code>http://localhost:8080/index.html</code>, this way you can modify your SASS files and it automatically compiles your code.</td>
+                </tr>
+                <tr>
+                  <td>npm run dist</td>
+                  <td>Generate the ready-to-use distribution based on changes made on <code>src</code> directory, the distribution files will be located at <code>dist</code> folder.</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="gs_npm_add_new_dependencies">Adding new dependencies</h3>
+            <p>You can add new dependencies easily using npm, just open your terminal in your root path and install the dependency as usual using <code>npm install dependency-name --save</code>, then you'll need to add a new entry on <b>dep-copy.json</b> file.</p>
+            <h4>Adding a new entry on dep-copy.json file</h4>
+            <p>We use a dep-copy.json file to filter which files do we really want to be copied to our development/production environment reducing the unnecessary load of unused files.</p>
+            <p>Open the <code>dep-copy.json</code> file and add a new entry like this:</p>
+            <div class="code-panel">
+              <div class="code-panel__heading"><span>dep-copy.json</span></div>
+              <div class="code-panel__content">
+                <pre class="prettyprint">&quot;npm-package-name&quot;: {
+  &quot;files&quot;:{
+    &quot;npm-dependency-destination/css&quot; : &quot;npm-dependency-name/css/*&quot;,
+    &quot;npm-dependency-destination/js&quot; : &quot;bootstrap/js/*&quot;
+  }
+}
+</pre>
+              </div>
+            </div>
+            <p>This way the new dependency will be copied from <code>node_modules/npm-dependency-name/</code> to <code>src/assets/lib/npm-dependency-destination/</code> and only the files you specified in the new npmcopy entry will be moved to the <b>lib</b> folder.</p>
+            <p>Globs are enabled for using on dep-copy.json file.</p>
+          </section>
+          <section id="plugins">
+            <h1 id="plugins">Plugins</h1>
+            <p>This template comes with four <a href="#required_dependencies">main dependencies</a>, and several plugins for the demo pages, here is the plugin list with the official documentation for each one.</p>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th width="25%">Name</th>
+                  <th width="60%">Documentation</th>
+                  <th class="number">Version</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>jQuery</td>
+                  <td><a href="https://jquery.com/">https://jquery.com/</a></td>
+                  <td class="number">>= 1.9.1</td>
+                </tr>
+                <tr>
+                  <td>Bootstrap</td>
+                  <td><a href="http://getbootstrap.com/">http://getbootstrap.com/</a></td>
+                  <td class="number">4.1.2</td>
+                </tr>
+                <tr>
+                  <td>perfect-scrollbar</td>
+                  <td><a href="https://github.com/noraesae/perfect-scrollbar">https://github.com/noraesae/perfect-scrollbar</a></td>
+                  <td class="number">1.4.0</td>
+                </tr>
+                <tr>
+                  <td>countUp.js</td>
+                  <td><a href="https://inorganik.github.io/countUp.js/">https://inorganik.github.io/countUp.js/</a></td>
+                  <td class="number">1.5.3</td>
+                </tr>
+                <tr id="plugin_datatables">
+                  <td>dataTables</td>
+                  <td><a href="http://datatables.net/">http://datatables.net/</a></td>
+                  <td class="number">1.10.16</td>
+                </tr>
+                <tr>
+                  <td>dataTables Buttons</td>
+                  <td><a href="https://github.com/DataTables/Buttons">https://github.com/DataTables/Buttons</a></td>
+                  <td class="number">1.4.2</td>
+                </tr>
+                <tr id="plugin_dropzone">
+                  <td>Dropzone</td>
+                  <td><a href="http://www.dropzonejs.com">http://www.dropzonejs.com</a></td>
+                  <td class="number">4.3.0</td>
+                </tr>
+                <tr>
+                  <td>CurvedLines</td>
+                  <td><a href="http://curvedlines.michaelzinsmaier.de/">http://curvedlines.michaelzinsmaier.de/</a></td>
+                  <td class="number">1.1.1</td>
+                </tr>
+                <tr>
+                  <td id="gritter_pluggin">Gritter</td>
+                  <td><a href="https://github.com/jboesch/Gritter">https://github.com/jboesch/Gritter</a></td>
+                  <td class="number">1.7.4</td>
+                </tr>
+                <tr id="plugin_fastclick">
+                  <td>Fast Click</td>
+                  <td><a href="https://github.com/foxythemes/fastclick">https://github.com/foxythemes/fastclick</a></td>
+                  <td class="number">1.0.3</td>
+                </tr>
+                <tr id="plugin_fuelux">
+                  <td>Fuel UX</td>
+                  <td><a href="http://getfuelux.com/">http://getfuelux.com/</a></td>
+                  <td class="number">3.15.11</td>
+                </tr>
+                <tr id="plugin_calendar">
+                  <td>FullCalendar</td>
+                  <td><a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a></td>
+                  <td class="number">3.8.0</td>
+                </tr>
+                <tr id="plugin_codemirror">
+                  <td>Codemirror</td>
+                  <td><a href="https://codemirror.net/">https://codemirror.net/</a></td>
+                  <td class="number">5.37.0</td>
+                </tr>
+                <tr>
+                  <td>jQuery Bootstrap 4 Breakpoint Check</td>
+                  <td><a href="https://github.com/foxythemes/bs4-breakpoint-check">https://github.com/foxythemes/bs4-breakpoint-check</a></td>
+                  <td class="number">1.0.5</td>
+                </tr>
+                <tr>
+                  <td id="jquery_nestable">jQuery Nestable</td>
+                  <td><a href="https://github.com/thesabbir/jquery-nestable">https://github.com/thesabbir/jquery-nestable</a></td>
+                  <td class="number">1.0</td>
+                </tr>
+                <tr>
+                  <td id="nifty_modals">jQuery Nifty Modals</td>
+                  <td><a href="https://github.com/foxythemes/jquery-niftymodals">https://github.com/foxythemes/jquery-niftymodals</a></td>
+                  <td class="number">1.3.1</td>
+                </tr>
+                <tr id="plugin_jqueryui">
+                  <td>jQuery UI</td>
+                  <td><a href="https://jqueryui.com/">https://jqueryui.com/</a></td>
+                  <td class="number">1.11.4</td>
+                </tr>
+                <tr id="plugin_masked">
+                  <td>jQuery Masked Input</td>
+                  <td><a href="https://github.com/digitalBush/jquery.maskedinput">https://github.com/digitalBush/jquery.maskedinput</a></td>
+                  <td class="number">1.4.1</td>
+                </tr>
+                <tr id="plugin_google_map">
+                  <td>Google Maps</td>
+                  <td><a href="https://maps.googleapis.com">https://maps.googleapis.com</a></td>
+                  <td class="number">3.0.0</td>
+                </tr>
+                <tr id="plugin_jvector_map">
+                  <td>jVectorMap</td>
+                  <td><a href="https://github.com/bjornd/jvectormap/">https://github.com/bjornd/jvectormap/</a></td>
+                  <td class="number">1.2.2</td>
+                </tr>
+                <tr>
+                  <td>jQuery Vector Map</td>
+                  <td><a href="https://github.com/manifestinteractive/jqvmap">https://github.com/manifestinteractive/jqvmap</a></td>
+                  <td class="number">1.5.1</td>
+                </tr>
+                <tr id="plugin_sparkline">
+                  <td>jQuery Sparkline</td>
+                  <td><a href="https://github.com/kapusta/jquery.sparkline">https://github.com/kapusta/jquery.sparkline</a></td>
+                  <td class="number">2.1.3</td>
+                </tr>
+                <tr id="plugin_magnific_popup">
+                  <td>Magnific Popup</td>
+                  <td><a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a></td>
+                  <td class="number">1.0.0</td>
+                </tr>
+                <tr id="plugin_masonry">
+                  <td>Masonry</td>
+                  <td><a href="http://masonry.desandro.com/">http://masonry.desandro.com/</a></td>
+                  <td class="number">4.1.0</td>
+                </tr>
+                <tr id="plugin_moment">
+                  <td>Moment</td>
+                  <td><a href="http://momentjs.com/">http://momentjs.com/</a></td>
+                  <td class="number">2.14.1</td>
+                </tr>
+                <tr id="plugin_mprogress">
+                  <td>mprogress</td>
+                  <td><a href="https://github.com/lightningtgc/MProgress.js">https://github.com/lightningtgc/MProgress.js</a></td>
+                  <td class="number">0.1.1</td>
+                </tr>
+                <tr id="plugin_parsley">
+                  <td>Parsley</td>
+                  <td><a href="http://parsleyjs.org/">http://parsleyjs.org/</a></td>
+                  <td class="number">2.4.3</td>
+                </tr>
+                <tr id="plugin_bsslider">
+                  <td>Bootstrap Slider</td>
+                  <td><a href="http://seiyria.github.io/bootstrap-slider/">http://seiyria.github.io/bootstrap-slider/</a></td>
+                  <td class="number">10.0.0</td>
+                </tr>
+                <tr id="plugin_select2">
+                  <td>Select2</td>
+                  <td><a href="https://select2.github.io/">https://select2.github.io/</a></td>
+                  <td class="number">4.0.3</td>
+                </tr>
+                <tr id="plugin_datetimepicker">
+                  <td>Date Time Picker</td>
+                  <td><a href="https://www.malot.fr/bootstrap-datetimepicker/">https://www.malot.fr/bootstrap-datetimepicker/</a></td>
+                  <td class="number">2.3.4</td>
+                </tr>
+                <tr id="plugin_multiselect">
+                  <td>Multi Select</td>
+                  <td><a href="http://loudev.com/">http://loudev.com/</a></td>
+                  <td class="number">0.9.12</td>
+                </tr>
+                <tr id="plugin_quicksearch">
+                  <td>Quicksearch</td>
+                  <td><a href="https://github.com/DeuxHuitHuit/quicksearch">https://github.com/DeuxHuitHuit/quicksearch</a></td>
+                  <td class="number">2.4.0</td>
+                </tr>
+                <tr id="plugin_summernote">
+                  <td>Sumernote</td>
+                  <td><a href="https://summernote.org/">https://summernote.org/</a></td>
+                  <td class="number">0.8.8</td>
+                </tr>
+                <tr>
+                  <td>Tiny Color</td>
+                  <td><a href="http://bgrins.github.io/TinyColor/">http://bgrins.github.io/TinyColor/</a></td>
+                  <td class="number">1.2.1</td>
+                </tr>
+                <tr id="plugin_flot">
+                  <td>Flot Charts</td>
+                  <td><a href="http://www.flotcharts.org/">http://www.flotcharts.org/</a></td>
+                  <td class="number">0.8.3</td>
+                </tr>
+                <tr id="plugin_morris">
+                  <td>Morris.js</td>
+                  <td><a href="https://github.com/morrisjs/morris.js">https://github.com/morrisjs/morris.jsTouchSwipe-Jquery-Plugin</a></td>
+                  <td class="number">0.5.1</td>
+                </tr>
+                <tr id="plugin_raphael">
+                  <td>Raphael.js</td>
+                  <td><a href="https://github.com/DmitryBaranovskiy/raphael">https://github.com/DmitryBaranovskiy/raphael</a></td>
+                  <td class="number">2.2.0</td>
+                </tr>
+                <tr id="plugin_chartjs">
+                  <td>Chart.js</td>
+                  <td><a href="https://github.com/chartjs/Chart.js">https://github.com/chartjs/Chart.js</a></td>
+                  <td class="number">2.7.1</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="support">
+            <h1 id="support">Support</h1>
+            <p>We are here to assist you, thank you for report any bug/issue to our email <b>support@foxythemes.net</b>.</p>
+            <p>What support includes?</p>
+            <ul>
+              <li>Availability to answer questions</li>
+              <li>Answering technical questions about item's features</li>
+              <li>Assistance with reported bugs and issues</li>
+              <li>Help with included 3rd party assets</li>
+            </ul>
+            <p>What support doesn't include:</p>
+            <ul>
+              <li>Customization services</li>
+              <li>Installation services</li>
+            </ul>
+            <p>If you already read the documentation and you still need assistance, please send us your purchase data to <b>support@foxythemes.net</b> and we'll be glad to help you.</p>
+          </section>
+          <section id="changelog">
+            <h1 id="changelog">Changelog</h1>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.5.1 - 1 August 2018</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="primary">
+                          <td>Updated: Bootstrap to v4.1.3</td>
+                        </tr>
+                        <tr class="primary">
+                          <td>Updated: dataTables to v1.10.19</td>
+                        </tr>
+                        <tr class="primary">
+                          <td>Updated: perfect-scrollbar to v1.4.0</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Move git repos to npm packages</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Added "active" class in sub-navigation layout</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Create different select2 sizes to match the BS form controls</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Missing hover &amp; active styles to disabled buttons</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: form-control-sm doesn't work in select</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Wrong active text color in calendar widget</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.5.0 - 13 Jun 2018</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="primary">
+                          <td>Updated: Bootstrap to v4.1.1</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Mega menu option</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Option to hide logo on collapsible sidebar</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Tooltip on collapsible left sidebar items</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: New tab styles</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Option for disabling left sidebar</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Form title dividers</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Loading AJAX progress bar</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added:	Create button group with select2</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Drop grunt support in favor of npm scripts</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Support for BS4 missing components</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Remove spaces between icons and text</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Improve layout color variables</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Improve color contrast calculation</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Create dataTable filters working example</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Summernote windows scroll up</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Select default style is shown on iPhone</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Misalignment in beagle login template</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Tab icons aren't centered</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Boxed layout is broken on IE11</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Fixed left sidebar not working on boxed layout</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Search input not working on "no sidebars" layout</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Select2 placeholder is different from the template style</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: BS-slider width fix</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.4.2 - 20 February 2018</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="danger">
+                          <td>Fixed: Error on Chart.js page</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Added chart tooltips</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Boxed layout</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.4.1 - 24 January 2018</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="danger">
+                          <td>Fixed: Left sidebar menu not showing on mobile</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: White corners on modals</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Differences between LESS & SASS source code</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Rename 'light' directory by 'starter'</td>
+                        </tr>
+                        <tr class="warning">
+                          <td>Improvement: Change the logo</td>
+                        </tr>
+                        <tr class="primary">
+                          <td>Updated: Bootstrap to v4.0.0</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.4.0 - 16 Jan 2018</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="danger">
+                          <td>Fixed: Improve print stylesheet for invoice page</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Select2 arrow position when allowClear is enabled</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Remove box-shadow in btn-link</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Gallery hover container not centered</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Missing hover style on disabled wizard tab</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Nifty modal closes when clicking on itself</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Wrong modals width on small devices</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Modal custom width not working</td>
+                        </tr>
+                        <tr class="primary">
+                          <td>Updated: Fullcalendar to v3.8.0</td>
+                        </tr>
+                        <tr class="primary">
+                          <td>Updated: grunt-sass to v2.0.0</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Support for Bootstrap 4 (v4.0.0-beta.2)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.3.0 - 2 Jun 2017</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="success">
+                          <td>Added: Sub navigation layout</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Loaders page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Code editor page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Booking page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Table filters page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Add dropdown menus panel icon</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Support for SASS</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Text overflow ellipsis in collapsed sidebar</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.2.1 - 18 Apr 2017</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="danger">
+                          <td>Fixed: Wrong position in date range picker caret</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Wrong wizard complete hover color</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Wrong margin left in colllapsible sidebar</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Dropzone upload not working on mobile</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.2.0 - 29 Dec 2016</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="success">
+                          <td>Added: Collapsible left sidebar support </td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Multilevel support in left sidebar menu</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Left sidebar perfect scrollbar window resize sync</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Integrate Multiselect plugin</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Bootstrap X Editable form</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Bootstrap date range picker</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Bootstrap file input</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Off-canvas menu layout</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Panel full width style</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Search input in top header</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Include development workflow in dist(src) folder</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Missing table-responsive class in responsive table</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Missing horizontal padding in datetime picker</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Fixed left sidebar perfect scrollbar window resize sync</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.1.1 - 27 Oct 2016</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="danger">
+                          <td>Fixed: Open right sidebar on swipe left not working</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Right sidebar toggle button problem on close</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-table">
+                  <div class="card-header">
+                    <div class="title">Version 1.1 - 25 Oct 2016</div>
+                  </div>
+                  <div class="card-body table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="success">
+                          <td>Added: Option to disable close right sidebar on click outside</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Timeline page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Timeline page version 2</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Typography page</td>
+                        </tr>
+                        <tr class="success">
+                          <td>Added: Invoice page</td>
+                        </tr>
+                        <tr class="danger">
+                          <td>Fixed: Content overflow problem</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card card-table">
+                <div class="card-header">
+                  <div class="title">Version 1.0 - 28 Sep 2016</div>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-striped table-borderless">
+                    <thead>
+                      <tr>
+                        <th>Change</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="primary">
+                        <td>Initial Release</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <nav class="be-right-sidebar">
+        <div class="sb-content">
+          <div class="tab-navigation">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+          </div>
+          <div class="tab-panel">
+            <div class="tab-content">
+              <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+                <div class="chat-contacts">
+                  <div class="chat-sections">
+                    <div class="be-scroller-chat">
+                      <div class="content">
+                        <h2>Recent</h2>
+                        <div class="contact-list contact-list-recent">
+                          <div class="user"><a href="#"><img src="assets/img/avatar1.png" alt="Avatar">
+                              <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div></a></div>
+                          <div class="user"><a href="#"><img src="assets/img/avatar2.png" alt="Avatar">
+                              <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div></a></div>
+                          <div class="user"><a href="#"><img src="assets/img/avatar3.png" alt="Avatar">
+                              <div class="user-data"><span class="status offline"></span><span class="name">Joel King		</span><span class="message">Ready for the meeti...</span></div></a></div>
+                        </div>
+                        <h2>Contacts</h2>
+                        <div class="contact-list">
+                          <div class="user"><a href="#"><img src="assets/img/avatar4.png" alt="Avatar">
+                              <div class="user-data2"><span class="status"></span><span class="name">Mike Bolthort</span></div></a></div>
+                          <div class="user"><a href="#"><img src="assets/img/avatar5.png" alt="Avatar">
+                              <div class="user-data2"><span class="status"></span><span class="name">Maggie jackson</span></div></a></div>
+                          <div class="user"><a href="#"><img src="assets/img/avatar6.png" alt="Avatar">
+                              <div class="user-data2"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-input">
+                    <input type="text" placeholder="Search..." name="q"><span class="mdi mdi-search"></span>
+                  </div>
+                </div>
+                <div class="chat-window">
+                  <div class="title">
+                    <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
+                      <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                    </div><span class="icon return mdi mdi-chevron-left"></span>
+                  </div>
+                  <div class="chat-messages">
+                    <div class="be-scroller-messages">
+                      <div class="content">
+                        <ul>
+                          <li class="friend">
+                            <div class="msg">Hello</div>
+                          </li>
+                          <li class="self">
+                            <div class="msg">Hi, how are you?</div>
+                          </li>
+                          <li class="friend">
+                            <div class="msg">Good, I'll need support with my pc</div>
+                          </li>
+                          <li class="self">
+                            <div class="msg">Sure, just tell me what is going on with your computer?</div>
+                          </li>
+                          <li class="friend">
+                            <div class="msg">I don't know it just turns off suddenly</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-input">
+                    <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
+                      <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
+                <div class="todo-container">
+                  <div class="todo-wrapper">
+                    <div class="be-scroller-todo">
+                      <div class="todo-content"><span class="category-title">Today</span>
+                        <ul class="todo-list">
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox" checked=""><span class="custom-control-label">Initialize the project</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                            </label>
+                          </li>
+                        </ul><span class="category-title">Tomorrow</span>
+                        <ul class="todo-list">
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Initialize the project							</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Create the main structure							</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Updates changes to GitHub							</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                              <input class="custom-control-input" type="checkbox"><span class="custom-control-label" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-input">
+                    <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
+                <div class="settings-wrapper">
+                  <div class="be-scroller-settings"><span class="category-title">General</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st1" id="st1"><span>
+                            <label for="st1"></label></span>
+                        </div><span class="name">Available</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st2" id="st2"><span>
+                            <label for="st2"></label></span>
+                        </div><span class="name">Enable notifications</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st3" id="st3"><span>
+                            <label for="st3"></label></span>
+                        </div><span class="name">Login with Facebook</span>
+                      </li>
+                    </ul><span class="category-title">Notifications</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st4" id="st4"><span>
+                            <label for="st4"></label></span>
+                        </div><span class="name">Email notifications</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st5" id="st5"><span>
+                            <label for="st5"></label></span>
+                        </div><span class="name">Project updates</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" checked="" name="st6" id="st6"><span>
+                            <label for="st6"></label></span>
+                        </div><span class="name">New comments</span>
+                      </li>
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st7" id="st7"><span>
+                            <label for="st7"></label></span>
+                        </div><span class="name">Chat messages</span>
+                      </li>
+                    </ul><span class="category-title">Workflow</span>
+                    <ul class="settings-list">
+                      <li>
+                        <div class="switch-button switch-button-sm">
+                          <input type="checkbox" name="st8" id="st8"><span>
+                            <label for="st8"></label></span>
+                        </div><span class="name">Deploy on commit</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/lib/prettify/prettify.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//-initialize the javascript
+      	App.init();
+      
+      	//-Runs prettify
+      	prettyPrint();
+      
+      	//-Offset is equal to top-bar height
+      	var offset = 100;
+      	$('body').scrollspy({
+      		target: '#aside-spy',
+      		offset: offset + 10
+      	});
+      
+      	$('#aside-spy li a').on('click',function(e) {
+      		e.preventDefault();
+      		$($(this).attr('href'))[0].scrollIntoView();
+      		scrollBy(0, -offset);
+      	});
+      
+      	$(window).on('activate.bs.scrollspy', function(e) {
+      		App.scroller.updateScroller(App.scroller.aside_scroll);
+      	});
+      });
+    </script>
+  </body>
+</html>

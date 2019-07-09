@@ -1,0 +1,61 @@
+<script src="../../../../marketscanr-beta/src/app/home/home.component.ts"></script>
+<div class="notification-box" style="position: absolute;top: 10px;right: 10px;z-index: 800;"></div>
+
+<div class="be-splash-screen">
+  <div class="be-wrapper be-login be-signup">
+    <div class="be-content">
+      <div class="main-content container-fluid">
+        <div class="splash-container sign-up">
+          <div class="card card-border-color card-border-color-primary">
+            <div class="card-header">
+              <span routerLink="/" style="font-size: 26px; font-weight: 800;  color: red; cursor: pointer;">newsfiltr</span>
+              <small>beta</small>
+
+              <!--<span class="splash-description">Please enter your user information.</span>-->
+            </div>
+            <div class="card-body">
+              <form action="index.html" method="get">
+                <!--<span class="splash-title pb-4">Sign Up</span>-->
+                <div class="form-group">
+                  <input [(ngModel)]="displayname" class="form-control" type="text" name="displayname" required="" placeholder="Full Name" autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <input [(ngModel)]="email" class="form-control" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
+                </div>
+                <div class="form-group row signup-password">
+                  <div class="col-6">
+                    <input [(ngModel)]="password" class="form-control" id="pass1" name="password"  type="password" required="" placeholder="Password">
+                  </div>
+                  <div class="col-6">
+                    <input [(ngModel)]="confirmpassword" class="form-control" name="confirm"  type="password" required="" placeholder="Confirm">
+                  </div>
+                </div>
+                <div class="recaptcha" id="signup_recaptcha"></div>
+                <div class="form-group pt-3 mb-3">
+                  <label class="custom-control custom-checkbox">
+                    <input (click)="checkTermsOfUse()" class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a>.</span>
+                  </label>
+                </div>
+                <div class="form-group pt-2">
+                  <button (click)="signup()" class="btn btn-block btn-primary btn-xl" type="submit">Sign Up</button>
+                </div>
+                <div class="title"><span class="splash-title pb-3">Or</span></div>
+                <div class="form-group row social-signup pt-0">
+                  <div class="col-6">
+                    <button style="cursor: not-allowed;" class="btn btn-lg btn-block btn-social btn-facebook btn-color" type="button"><i class="mdi mdi-facebook icon icon-left"></i>Facebook</button>
+                  </div>
+                  <div class="col-6">
+                    <button style="cursor: not-allowed;" class="btn btn-lg btn-block btn-social btn-google-plus btn-color" type="button"><i class="mdi mdi-google-plus icon icon-left"></i>Google Plus</button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="splash-footer"><span>Already have an account? <a routerLink="/login" style="cursor: pointer;">Log In</a></span></div>
+          <div style="margin-top: 20px;" class="splash-footer"><small>&copy; 2018 MCM Technologies, LLC</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
