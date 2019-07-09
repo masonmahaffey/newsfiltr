@@ -1,4 +1,4 @@
-![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/home_page.png)
+![alt text](https://github.com/masonmahaffey/newsfiltr/blob/master/screenshots/Screen%20Shot%202019-07-09%20at%201.25.40%20AM.png)
 
 # Newsfiltr
 
